@@ -1,0 +1,26 @@
+version: '2'
+
+services:
+  mysql:
+    image: mysql
+    command: mysqld --skip-name-resolve
+    env_file:
+      - ./env/mysql.env
+    expose:
+     - "3306"
+
+  womenactivists.lib.unb.ca:
+    build: .
+    container_name: womenactivists.lib.unb.ca
+    expose:
+     - "80"
+    ports:
+      - "3085:80"
+    env_file:
+      - ./env/drupal.env
+    volumes:
+      - ./config-yml:/app/configuration
+      - ./custom/modules:/app/modules/custom
+      - ./custom/themes:/app/themes/custom
+      - ./tests/behat.yml:/tmp/drupal_build/behat.yml
+      - ./tests/features:/tmp/drupal_build/features

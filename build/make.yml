@@ -7,8 +7,8 @@ defaults:
 
 projects:
   drupal:
+    version: '8.1.7'
     type: core
-    version: 8.1.7
 
   config_update:
     version: '1.1'

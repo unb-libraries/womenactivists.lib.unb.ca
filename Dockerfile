@@ -2,6 +2,7 @@ FROM unblibraries/drupal:alpine-nginx-php7-8.x
 MAINTAINER Jacob Sanford <jsanford@unb.ca>
 
 LABEL name="womenactivists.lib.unb.ca"
+LABEL vcs-ref=""
 LABEL vcs-url="https://github.com/unb-libraries/womenactivists.lib.unb.ca"
 
 # Universal environment variables.

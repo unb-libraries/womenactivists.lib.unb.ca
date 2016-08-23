@@ -17,7 +17,7 @@ projects:
   inline_entity_form:
     version: '1.0-alpha6'
   migrate_plus:
-    version: '2.0-beta1'
+    version: '2.0-beta2'
   migrate_tools:
     version: '2.0-beta1'
   migrate_upgrade:

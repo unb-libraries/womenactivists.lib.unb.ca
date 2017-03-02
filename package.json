@@ -1,16 +1,18 @@
 {
+  "name": "womenactivists.lib.unb.ca_local",
+  "version": "1.0.0",
+  "main": "Gruntfile.js",
+  "author": "libsupport@unb.ca",
+  "private": true,
+  "license": "MIT",
   "config": {
-    "siteuri": "womenactivists.lib.unb.ca"
+    "siteuri": "womenactivists.lib.unb.ca",
+    "upstream_image": "unblibraries/drupal:alpine-nginx-php7-8.x-composer",
+    "devhost": "devserver.docker.remote"
   },
   "commitMsg": {
     "noServerHook": true
   },
-  "name": "womenactivists.lib.unb.ca_local",
-  "version": "1.0.0",
-  "main": "Gruntfile.js",
-  "author": "libsystems@unb.ca",
-  "private": true,
-  "license": "MIT",
   "scripts": {
     "behat-tests": "./node_modules/.bin/grunt behat-tests",
     "clean": "./node_modules/.bin/grunt clean:all",

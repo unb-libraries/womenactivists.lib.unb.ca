@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * Install, update and uninstall for the default docker installation profile.
@@ -11,12 +12,9 @@
  *
  * @see system_install()
  */
-function PROFILE_SLUG_install() {
-  include_once DRUPAL_ROOT . '/core/profiles/standard/standard.install';
-  standard_install();
-
-  // If importing config, avoid issue mentioned in https://www.drupal.org/node/2583113.
-  Drupal::entityManager()->getStorage("shortcut_set")->load("default")->delete();
+function womacti_install() {
+  include_once DRUPAL_ROOT . '/core/profiles/minimal/minimal.install';
+  minimal_install();
 
   // Can add code in here to make nodes, terms, etc.
 }

@@ -1,8 +1,6 @@
+var pkgJson = require('./package.json');
 module.exports = function (grunt) {
   grunt.initConfig({
-    devhost: 'devserver.docker.remote',
-    siteuri: 'womenactivists.lib.unb.ca',
-    upstreamImage: 'unblibraries/drupal:alpine-nginx-php7-8.x',
     clean: {
       composer: ['vendor', 'composer.lock'],
       githooks: ['.git/hooks/*.sample'],
@@ -11,7 +9,7 @@ module.exports = function (grunt) {
     },
     shell: {
       behat_tests: {
-        command: 'docker exec <%= siteuri %> /scripts/runTests.sh'
+        command: 'docker exec ' + pkgJson.config.siteuri  + ' /scripts/runTests.sh'
       },
       copygithooks: {
         command: 'cp package-conf/git-hooks/* .git/hooks/'
@@ -20,19 +18,19 @@ module.exports = function (grunt) {
         command: './node_modules/.bin/composer install'
       },
       disable_dev_mode: {
-        command: 'docker exec <%= siteuri %> sh -c \'drupal --root=/app/html site:mode prod\''
+        command: 'docker exec ' + pkgJson.config.siteuri  + ' sh -c \'drupal --root=/app/html site:mode prod\''
       },
       enable_dev_mode: {
-        command: 'docker exec <%= siteuri %> sh -c \'drupal --root=/app/html site:mode dev\''
+        command: 'docker exec ' + pkgJson.config.siteuri  + ' sh -c \'drupal --root=/app/html site:mode dev\''
       },
       instance_start_over: {
-        command: './scripts/local/instance_start_over.sh <%= upstreamImage %>'
+        command: './scripts/local/instance_start_over.sh ' + pkgJson.config.upstream_image
       },
       instance_destroy: {
         command: './scripts/local/instance_destroy.sh'
       },
       instance_start: {
-        command: './scripts/local/instance_start.sh <%= upstreamImage %>'
+        command: './scripts/local/instance_start.sh ' + pkgJson.config.upstream_image
       },
       instance_stop: {
         command: './scripts/local/instance_stop.sh'
@@ -47,19 +45,19 @@ module.exports = function (grunt) {
         command: 'npm install'
       },
       remote_dev_sync: {
-        command: './scripts/local/sync_from_remote.sh <%= siteuri %> <%= devhost %>'
+        command: './scripts/local/sync_from_remote.sh ' + pkgJson.config.siteuri  + ' ' + pkgJson.config.devhost
       },
       tail_logs: {
         command: 'docker-compose logs -f'
       },
       uli: {
-        command: 'docker exec <%= siteuri %> sh -c \'drush --root=/app/html uli | sed -e "s|http://default|$DEV_WEB_URI|g"\''
+        command: 'docker exec ' + pkgJson.config.siteuri  + ' sh -c \'drush --root=/app/html uli | sed -e "s|http://default|$DEV_WEB_URI|g"\''
       },
       validatephp: {
         command: './.git/hooks/pre-commit || true'
       },
       write_config: {
-        command: 'docker exec <%= siteuri %> /scripts/configExport.sh'
+        command: 'docker exec ' + pkgJson.config.siteuri  + ' /scripts/configExport.sh'
       },
       options: {
         execOptions: {

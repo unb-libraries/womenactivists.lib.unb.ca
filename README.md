@@ -25,7 +25,7 @@ npm run start
 ### Other useful commands
 * ```clean``` : Clean up typically created files by node and other scripts.
 * ```container-shell``` : Opens a /sh prompt into the container.
-* ```destroy"``` :  Alias for instance-destroy.
+* ```destroy``` :  Alias for instance-destroy.
 * ```instance-destroy``` :  Destroys the local instance and removes container and data.
 * ```instance-start-over``` : Stops and destroys any running containers, removes data and volumes, leaving the status similar to immediately after node run setup.
 * ```instance-start``` : Starts the container and tails the logs.

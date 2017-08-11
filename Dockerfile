@@ -15,10 +15,6 @@ ENV DRUPAL_SITE_URI womenactivists.lib.unb.ca
 ENV DRUPAL_SITE_UUID 2a45ae15-13ee-480c-8389-177be66b8d67
 ENV DRUPAL_CONFIGURATION_EXPORT_SKIP devel
 
-# Newrelic.
-ENV NEWRELIC_PHP_VERSION 7.4.0.198
-ENV NEWRELIC_PHP_ARCH musl
-
 # Add scripts, remove delete upstream drupal build.
 COPY ./scripts/container /scripts
 RUN /scripts/DeployUpstreamContainerScripts.sh && \

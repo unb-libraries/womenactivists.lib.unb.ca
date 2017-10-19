@@ -28,4 +28,4 @@ services:
       - ./custom/modules:/app/modules/custom
       - ./custom/themes:/app/themes/custom
       - ./tests/behat.yml:/tmp/drupal_build/behat.yml
-      - ./tests/features:/tmp/drupal_build/features
+      - ./tests:/app/tests

@@ -1,4 +1,5 @@
 dockworker:
+  version: 1.0
   instance:
     project_prefix: WOMA
     name: womenactivists.lib.unb.ca

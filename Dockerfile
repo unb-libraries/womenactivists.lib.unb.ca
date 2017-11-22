@@ -21,7 +21,7 @@ RUN /scripts/DeployUpstreamContainerScripts.sh && \
   /scripts/deleteUpstreamTree.sh
 
 # Add Mail Sending, Rsyslogd
-RUN apk --update add postfix rsyslog  && \
+RUN apk --update add postfix rsyslog php7-redis && \
   rm -f /var/cache/apk/* && \
   touch /var/log/nginx/access.log && touch /var/log/nginx/error.log
 

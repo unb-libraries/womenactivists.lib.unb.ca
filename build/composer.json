@@ -66,6 +66,7 @@
         "drupal/core": "8.4.0",
         "drupal/features": "3.4",
         "drupal/inline_entity_form": "1.0-alpha6",
+        "drupal/redis": "1.0-rc2",
         "solarium/solarium": "3.6.*",
         "webflo/drupal-finder": "^0.3.0",
         "webmozart/path-util": "^2.3"

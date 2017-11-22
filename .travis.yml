@@ -1,0 +1,54 @@
+language: php
+sudo: required
+
+services:
+  - docker
+
+php:
+  - '7.1'
+
+cache:
+  directories:
+        - $HOME/.composer/cache
+
+git:
+  depth: 1
+
+env:
+  global:
+    - SERVICE_NAME=womenactivists.lib.unb.ca
+    - AMAZON_ECR_REGION=us-east-1
+    - DEPLOY_BRANCHES=dev,prod
+    - DEPLOYMENT_FINISHED_MARKER=99_report_as_complete
+    - DOCKER_UPSTREAM_IMAGE=unblibraries/drupal:alpine-nginx-php7-8.x-composer
+    - OLD_IMAGES_TO_KEEP=2
+    - SERVICE_DEPLOY_PORT=80
+    - SERVICE_TEST_UP_PATH=/user
+
+before_install:
+  - git clone git://github.com/unb-libraries/CargoDock.git CargoDock
+  - CargoDock/travis/installDockerCompose.sh
+  - CargoDock/aws/installAuthAws.sh
+  - cp docker-compose.yml.travis docker-compose.yml
+  - CargoDock/travis/setDockerComposeEnv.sh
+
+before_script:
+  - CargoDock/travis/buildInstanceTheme.sh
+  - CargoDock/travis/buildInstanceForTesting.sh
+  - CargoDock/travis/waitForDeploy.sh
+  - CargoDock/travis/checkStartupForErrors.sh
+
+script:
+  - CargoDock/travis/testInstance.sh
+
+after_success:
+  - CargoDock/travis/buildImagePushToRepo.sh
+  - CargoDock/travis/cleanupOldImages.sh
+  - CargoDock/travis/triggerKubeDeploy.sh
+
+notifications:
+  slack:
+    rooms:
+      secure: G1weJBckT8PsIBlRiM+Vs+xbplwbqREQwnMRRJtnNXkGCBf6Xmg4vJldsk960xdBKGC8VqwnYV59YXDqWksz6zZDGraWq+5k2KQ3E+05yidYYCuGcCNPO2DgK5XTzWeh8TYZwAya5ZsIM8xfgWFEgYVKXx37LY6kuNYh+41gPWbTO7hUSMpngMikojJXAKiaH5DZn0uZOasCdYO9yoIJeaOwMNjWJ3XM9M7CsdRK28SVnJWovzUenELywfvucSxLNPbqVHI60nO+Lgu5yRBB0BFPvfxjovuxmfxl7GXVy26KRm0Tnh4KQ3TwErY2ER2dGRVqdJReTerQSMmZ94BFv/2IT4cgs5j8LGp/MQl1uJewLAzZRAttmxMbIemJLlbXx//SjkH+vqMgbFFmQVIsqXK3AA82AaaPBoP7D20yXvR/zRwWbZM2gtUgJqyhpG2yPKbJPjSfNtbeEnBvrc8+/ExpvZOUv06raE1kfBsLHTTuBsIyQsCt/Uf+Rs2nQtdhrFVM/v5VGe/WLPHd3k+BjrrruxAGLp/e5y/6aCHSTnx5WBGwSpA5cG1Xtv0SYC+YyzDs+o3CW+oXvlYZ8SVd1lUZNI+lVIT9VeHtMrF7xQEeZi8O491AejzcX6yfU27zrjdqixGYa7YddoWdmjqbwPZQPdsSTN7NVWcAGvKCc7Q=
+    on_start: always
+    on_success: always

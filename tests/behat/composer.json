@@ -1,6 +1,6 @@
 {
   "license": "MIT",
-  "name": "unblibraries/womenactivists.lib.unb.ca-tests",
+  "name": "unb-libraries/womenactivists.lib.unb.ca-tests",
   "description": "Libraries for behat testing for womenactivists.lib.unb.ca.",
   "authors": [
     {

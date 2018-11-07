@@ -68,7 +68,7 @@
         "drupal/inline_entity_form": "1.0-alpha6",
         "drupal/migrate_plus": "4.0",
         "drupal/migrate_tools": "4.0",
-        "drupal/migrate_upgrade": "3.0-rc5",
+        "drupal/migrate_upgrade": "3.0-rc4",
         "solarium/solarium": "3.6.*",
         "webflo/drupal-finder": "^0.3.0",
         "webmozart/path-util": "^2.3"

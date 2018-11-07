@@ -1,0 +1,22 @@
+uuid: 11c31980-fe3b-4568-9128-1a692fd05946
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: ZygdGYeiCxFpvEKIZrZO3z7kRw9YewHe38sCd7XoiAg
+id: migrate_drupal_
+label: 'Import from Drupal '
+description: 'Migrations originally generated from drush migrate-upgrade --configure-only'
+source_type: 'Drupal '
+module: null
+shared_configuration:
+  source:
+    key: drupal_
+    database:
+      driver: mysql
+      username: root
+      password: datadump
+      host: mysqlimport
+      port: ''
+      database: womenactivists
+      prefix: null

@@ -1,0 +1,17 @@
+uuid: 1fb4c01a-1812-4df3-8557-ab0f25c5dcb8
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Commentary
+type: commentary
+description: 'Commentary on the Women Social Activists website.  Includes a title, byline, short author bio and photo, and lengthy text.'
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

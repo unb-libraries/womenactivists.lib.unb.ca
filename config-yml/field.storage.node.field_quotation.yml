@@ -1,0 +1,19 @@
+uuid: 31177a2b-7b88-430e-bafc-29c24f012a69
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_quotation
+field_name: field_quotation
+entity_type: node
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

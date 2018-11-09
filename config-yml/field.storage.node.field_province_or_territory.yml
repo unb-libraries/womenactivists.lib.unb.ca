@@ -1,0 +1,20 @@
+uuid: e69b69c8-4ad2-4d36-b5b5-822bbd8ce909
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_province_or_territory
+field_name: field_province_or_territory
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

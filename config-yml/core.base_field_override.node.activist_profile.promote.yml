@@ -1,0 +1,22 @@
+uuid: 9e89b1c3-549a-4ce7-842a-af3f999a972d
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.activist_profile
+id: node.activist_profile.promote
+field_name: promote
+entity_type: node
+bundle: activist_profile
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

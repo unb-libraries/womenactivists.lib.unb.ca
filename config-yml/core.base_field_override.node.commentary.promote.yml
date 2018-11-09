@@ -1,0 +1,22 @@
+uuid: 2aaeeabc-d9f8-46c9-8687-9630f1704716
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.commentary
+id: node.commentary.promote
+field_name: promote
+entity_type: node
+bundle: commentary
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

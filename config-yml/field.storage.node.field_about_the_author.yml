@@ -1,0 +1,19 @@
+uuid: 7bed07c5-a01b-4fd1-bd1e-0ece0bb4828e
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_about_the_author
+field_name: field_about_the_author
+entity_type: node
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

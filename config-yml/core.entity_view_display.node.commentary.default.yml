@@ -1,0 +1,47 @@
+uuid: 9577d33f-1993-4dd8-8d15-6bece0f2f118
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.commentary.field_about_the_author
+    - field.field.node.commentary.field_author_photo
+    - field.field.node.commentary.field_commentary
+    - node.type.commentary
+  module:
+    - image
+    - text
+    - user
+id: node.commentary.default
+targetEntityType: node
+bundle: commentary
+mode: default
+content:
+  field_about_the_author:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_author_photo:
+    weight: 0
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_commentary:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  links:
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

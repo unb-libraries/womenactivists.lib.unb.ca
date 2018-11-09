@@ -1,0 +1,17 @@
+uuid: 1f53001a-c9ee-4220-8241-9a78536ea901
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Activist Profile'
+type: activist_profile
+description: 'Profile of an activist.'
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

@@ -1,0 +1,22 @@
+uuid: be6d5df0-078a-4d20-9773-c089dc99594c
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.activist_profile.field_name
+    - node.type.activist_profile
+  module:
+    - user
+id: node.activist_profile.teaser
+targetEntityType: node
+bundle: activist_profile
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_name: true

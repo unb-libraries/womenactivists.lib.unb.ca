@@ -1,0 +1,23 @@
+uuid: bbb91b01-db48-44a9-8446-5c5fb95e2d6f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_links_of_interest
+    - node.type.activist_profile
+  module:
+    - link
+id: node.activist_profile.field_links_of_interest
+field_name: field_links_of_interest
+entity_type: node
+bundle: activist_profile
+label: 'Links of Interest'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

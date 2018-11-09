@@ -1,0 +1,22 @@
+uuid: 871f332a-737a-40a3-9461-410d22cf8a63
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.commentary.field_commentary
+    - node.type.commentary
+  module:
+    - user
+id: node.commentary.teaser
+targetEntityType: node
+bundle: commentary
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_commentary: true

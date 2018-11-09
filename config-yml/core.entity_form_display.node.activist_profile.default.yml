@@ -1,0 +1,86 @@
+uuid: 5484a5a0-3cbd-4eb0-990d-24f0937c5cde
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.activist_profile.field_biography
+    - field.field.node.activist_profile.field_images
+    - field.field.node.activist_profile.field_links_of_interest
+    - field.field.node.activist_profile.field_name
+    - field.field.node.activist_profile.field_portrait
+    - field.field.node.activist_profile.field_province_or_territory
+    - field.field.node.activist_profile.field_quotation
+    - image.style.thumbnail
+    - node.type.activist_profile
+  module:
+    - image
+    - link
+    - text
+id: node.activist_profile.default
+targetEntityType: node
+bundle: activist_profile
+mode: default
+content:
+  field_biography:
+    weight: 3
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea_with_summary
+    region: content
+  field_images:
+    weight: 4
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_links_of_interest:
+    weight: 6
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_name:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_portrait:
+    weight: 1
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_province_or_territory:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_quotation:
+    weight: 2
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+hidden:
+  created: true
+  path: true
+  promote: true
+  status: true
+  sticky: true
+  title: true
+  uid: true

@@ -1,0 +1,9 @@
+uuid: fc0e692a-fd5d-4690-a15d-7a3b9c32a1cd
+langcode: en
+status: true
+dependencies: {  }
+name: 'Province or Territory'
+vid: province_or_territory
+description: 'Province/territory of origin.'
+hierarchy: 0
+weight: 0

@@ -1,0 +1,19 @@
+uuid: 127c4265-d36a-4235-8d84-ede29a4f98bb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_about_the_author
+    - node.type.commentary
+id: node.commentary.field_about_the_author
+field_name: field_about_the_author
+entity_type: node
+bundle: commentary
+label: 'About the Author'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

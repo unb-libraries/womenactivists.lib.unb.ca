@@ -1,0 +1,22 @@
+uuid: 042c5ba7-9986-44e9-bd9b-53f697f473c2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_biography
+    - node.type.activist_profile
+  module:
+    - text
+id: node.activist_profile.field_biography
+field_name: field_biography
+entity_type: node
+bundle: activist_profile
+label: Biography
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+field_type: text_with_summary

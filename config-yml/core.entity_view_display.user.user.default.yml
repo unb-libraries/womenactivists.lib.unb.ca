@@ -17,7 +17,6 @@ mode: default
 content:
   member_for:
     weight: 5
-    region: content
   user_picture:
     type: image
     weight: 0
@@ -26,5 +25,4 @@ content:
       image_link: content
     third_party_settings: {  }
     label: hidden
-    region: content
 hidden: {  }

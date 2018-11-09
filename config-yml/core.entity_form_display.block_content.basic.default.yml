@@ -15,13 +15,13 @@ bundle: basic
 mode: default
 content:
   body:
-    weight: 27
+    type: text_textarea_with_summary
+    weight: -4
     settings:
       rows: 9
       summary_rows: 3
       placeholder: ''
     third_party_settings: {  }
-    type: text_textarea_with_summary
     region: content
   info:
     type: string_textfield

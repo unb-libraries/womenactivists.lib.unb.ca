@@ -1,0 +1,32 @@
+<?php
+
+/**
+ * @file
+ * Contains womact_install.install.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function womact_install_install() {
+  $provinces = [
+    'New Brunswick',
+    'Newfoundland and Labrador',
+    'Nova Scotia',
+    'Prince Edward Island',
+  ];
+
+  addTerms('province_or_territory', $provinces);
+}
+
+function addTerms($vocabulary, $terms) {
+
+  foreach ($terms as $term) {
+    $new_term = \Drupal\taxonomy\Entity\Term::create([
+      'vid' => $vocabulary,
+      'name' => $term,
+    ]);
+
+    $new_term->save();
+  }
+}

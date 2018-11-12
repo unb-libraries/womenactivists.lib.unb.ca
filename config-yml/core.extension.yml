@@ -36,6 +36,7 @@ module:
   update: 0
   user: 0
   views_ui: 0
+  womact_install: 0
   menu_link_content: 1
   views: 10
   womacti: 1000

@@ -1,0 +1,19 @@
+uuid: 0fd8a2df-d7c3-4f8d-9e99-7e3a4dc93302
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_portrait_caption
+    - node.type.activist_profile
+id: node.activist_profile.field_portrait_caption
+field_name: field_portrait_caption
+entity_type: node
+bundle: activist_profile
+label: 'Portrait Caption'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

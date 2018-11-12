@@ -19,4 +19,10 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
+  field_biography: true
+  field_images: true
+  field_links_of_interest: true
   field_name: true
+  field_portrait: true
+  field_province_or_territory: true
+  field_quotation: true

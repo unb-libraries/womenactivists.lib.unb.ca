@@ -53,10 +53,6 @@
         {
             "type": "git",
             "url": "https://github.com/unb-libraries/drupal-development-libraries.git"
-        },
-        {
-            "type": "git",
-            "url": "https://git.drupal.org/sandbox/spoit-2806183.git"
         }
     ],
     "require": {
@@ -69,9 +65,8 @@
         "drupal/core": "8.6.1",
         "drupal/features": "3.4",
         "drupal/inline_entity_form": "1.0-alpha6",
+        "drupal/paragraphs": "^1.5",
         "drush/drush": "^8.1.15",
-        "sandbox/spoit-2806183": "1.x",
-        "solarium/solarium": "3.6.*",
         "webflo/drupal-finder": "^0.3.0",
         "webmozart/path-util": "^2.3"
     },

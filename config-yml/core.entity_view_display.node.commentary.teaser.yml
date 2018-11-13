@@ -1,10 +1,11 @@
-uuid: 871f332a-737a-40a3-9461-410d22cf8a63
+uuid: 71f2c398-a7da-4d02-8725-6c969960a9d4
 langcode: en
 status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.commentary.field_commentary
+    - field.field.node.commentary.field_about
+    - field.field.node.commentary.field_portrait
     - node.type.commentary
   module:
     - user
@@ -19,6 +20,5 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
-  field_about_the_author: true
-  field_author_photo: true
-  field_commentary: true
+  field_about: true
+  field_portrait: true

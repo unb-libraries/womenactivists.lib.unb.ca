@@ -1,16 +1,14 @@
-uuid: 1ac649ea-9986-4b8d-b36c-2fbaeb800624
+uuid: 4e27bf89-f6e1-41b4-9eb0-64f6c506e3b5
 langcode: en
 status: true
 dependencies:
   module:
     - node
-id: node.field_name
-field_name: field_name
+id: node.field_book_quot
+field_name: field_book_quot
 entity_type: node
-type: string
+type: string_long
 settings:
-  max_length: 255
-  is_ascii: false
   case_sensitive: false
 module: core
 locked: false

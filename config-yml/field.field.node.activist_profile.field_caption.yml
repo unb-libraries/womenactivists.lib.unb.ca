@@ -1,12 +1,12 @@
-uuid: 0fd8a2df-d7c3-4f8d-9e99-7e3a4dc93302
+uuid: 6349c5b8-0fca-4eab-bf0b-32f393e5db20
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_portrait_caption
+    - field.storage.node.field_caption
     - node.type.activist_profile
-id: node.activist_profile.field_portrait_caption
-field_name: field_portrait_caption
+id: node.activist_profile.field_caption
+field_name: field_caption
 entity_type: node
 bundle: activist_profile
 label: 'Portrait Caption'

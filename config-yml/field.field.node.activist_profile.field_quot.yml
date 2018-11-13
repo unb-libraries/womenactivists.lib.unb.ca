@@ -1,19 +1,19 @@
-uuid: 20400e98-4b69-4724-b4f3-d4b30fecfaa7
+uuid: d97d4513-7913-4645-917a-87a3284eb1aa
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_name
+    - field.storage.node.field_quot
     - node.type.activist_profile
-id: node.activist_profile.field_name
-field_name: field_name
+id: node.activist_profile.field_quot
+field_name: field_quot
 entity_type: node
 bundle: activist_profile
-label: Name
+label: Quotation
 description: ''
 required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }
-field_type: string
+field_type: string_long

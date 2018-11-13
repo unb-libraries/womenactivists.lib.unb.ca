@@ -1,22 +1,21 @@
-uuid: a790e5f2-2aff-4aa8-968a-0553c51c55e1
+uuid: f1bf9cd1-1aae-4f3c-9bbb-bc9775cec2a6
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_commentary
+    - field.storage.node.field_about
     - node.type.commentary
   module:
     - text
-id: node.commentary.field_commentary
-field_name: field_commentary
+id: node.commentary.field_about
+field_name: field_about
 entity_type: node
 bundle: commentary
-label: Commentary
+label: 'About the Author'
 description: ''
 required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
-settings:
-  display_summary: false
-field_type: text_with_summary
+settings: {  }
+field_type: text_long

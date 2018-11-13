@@ -1,4 +1,4 @@
-uuid: 1f53001a-c9ee-4220-8241-9a78536ea901
+uuid: b8b897f5-6725-4629-a722-8dc29aa710c0
 langcode: en
 status: true
 dependencies:
@@ -10,8 +10,8 @@ third_party_settings:
     parent: ''
 name: 'Activist Profile'
 type: activist_profile
-description: 'Profile of an activist.'
+description: "Profile of an activist.\r\n"
 help: ''
 new_revision: false
-preview_mode: 0
+preview_mode: 2
 display_submitted: false

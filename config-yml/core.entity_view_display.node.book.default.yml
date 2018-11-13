@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.book.body
+    - field.field.node.book.field_book_quot
     - node.type.book
   module:
     - text
@@ -22,6 +23,13 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_book_quot:
+    weight: 102
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
   links:
     weight: 101
     region: content

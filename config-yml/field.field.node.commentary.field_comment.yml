@@ -1,0 +1,22 @@
+uuid: ed5fb78d-56b3-4d34-9de0-2278f1ffed76
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_comment
+    - node.type.commentary
+  module:
+    - text
+id: node.commentary.field_comment
+field_name: field_comment
+entity_type: node
+bundle: commentary
+label: Commentary
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

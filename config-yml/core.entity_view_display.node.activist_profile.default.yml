@@ -1,16 +1,15 @@
-uuid: abb9fb49-4020-4340-b928-2cdbb9a06ffe
+uuid: de15f35a-6d2b-4bfe-b47d-2f9b1af4a532
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.activist_profile.field_biography
-    - field.field.node.activist_profile.field_links_of_interest
-    - field.field.node.activist_profile.field_name
-    - field.field.node.activist_profile.field_pictures
+    - field.field.node.activist_profile.field_bio
+    - field.field.node.activist_profile.field_caption
+    - field.field.node.activist_profile.field_links
+    - field.field.node.activist_profile.field_pics
     - field.field.node.activist_profile.field_portrait
-    - field.field.node.activist_profile.field_portrait_caption
-    - field.field.node.activist_profile.field_province_or_territory
-    - field.field.node.activist_profile.field_quotation
+    - field.field.node.activist_profile.field_prov
+    - field.field.node.activist_profile.field_quot
     - node.type.activist_profile
   module:
     - entity_reference_revisions
@@ -23,15 +22,22 @@ targetEntityType: node
 bundle: activist_profile
 mode: default
 content:
-  field_biography:
-    weight: 4
+  field_bio:
+    weight: 3
     label: above
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
-  field_links_of_interest:
-    weight: 7
+  field_caption:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_links:
+    weight: 6
     label: above
     settings:
       trim_length: 80
@@ -42,17 +48,9 @@ content:
     third_party_settings: {  }
     type: link
     region: content
-  field_name:
-    weight: 1
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
-  field_pictures:
+  field_pics:
     type: entity_reference_revisions_entity_view
-    weight: 9
+    weight: 4
     label: above
     settings:
       view_mode: default
@@ -60,7 +58,7 @@ content:
     third_party_settings: {  }
     region: content
   field_portrait:
-    weight: 2
+    weight: 0
     label: above
     settings:
       image_style: ''
@@ -68,31 +66,20 @@ content:
     third_party_settings: {  }
     type: image
     region: content
-  field_portrait_caption:
-    weight: 8
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: basic_string
-    region: content
-  field_province_or_territory:
-    weight: 0
+  field_prov:
+    weight: 5
     label: above
     settings:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
     region: content
-  field_quotation:
-    weight: 3
+  field_quot:
+    weight: 2
     label: above
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
-  links:
-    weight: 6
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-hidden: {  }
+hidden:
+  links: true

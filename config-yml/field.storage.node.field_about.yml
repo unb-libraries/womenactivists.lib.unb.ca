@@ -1,16 +1,16 @@
-uuid: fabe071b-ecc1-41f4-800a-edc39714f62f
+uuid: 21025fd8-3442-4280-ada7-11dcd095d84a
 langcode: en
 status: true
 dependencies:
   module:
     - node
-id: node.field_portrait_caption
-field_name: field_portrait_caption
+    - text
+id: node.field_about
+field_name: field_about
 entity_type: node
-type: string_long
-settings:
-  case_sensitive: false
-module: core
+type: text_long
+settings: {  }
+module: text
 locked: false
 cardinality: 1
 translatable: true

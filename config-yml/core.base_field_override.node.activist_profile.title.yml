@@ -1,0 +1,18 @@
+uuid: 223bddd3-88a3-49ae-b7eb-56b545bea5e8
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.activist_profile
+id: node.activist_profile.title
+field_name: title
+entity_type: node
+bundle: activist_profile
+label: Name
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

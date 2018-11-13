@@ -1,16 +1,16 @@
-uuid: 31177a2b-7b88-430e-bafc-29c24f012a69
+uuid: f9e359b1-1495-4543-a393-82eac6d9b2ee
 langcode: en
 status: true
 dependencies:
   module:
+    - link
     - node
-id: node.field_quotation
-field_name: field_quotation
+id: node.field_links
+field_name: field_links
 entity_type: node
-type: string_long
-settings:
-  case_sensitive: false
-module: core
+type: link
+settings: {  }
+module: link
 locked: false
 cardinality: 1
 translatable: true

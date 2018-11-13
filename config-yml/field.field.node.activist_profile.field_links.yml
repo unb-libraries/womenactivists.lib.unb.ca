@@ -1,22 +1,23 @@
-uuid: 042c5ba7-9986-44e9-bd9b-53f697f473c2
+uuid: d3e04e29-30b9-4391-8b1c-f9a43a100d88
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_biography
+    - field.storage.node.field_links
     - node.type.activist_profile
   module:
-    - text
-id: node.activist_profile.field_biography
-field_name: field_biography
+    - link
+id: node.activist_profile.field_links
+field_name: field_links
 entity_type: node
 bundle: activist_profile
-label: Biography
+label: 'Links of Interest'
 description: ''
 required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  display_summary: false
-field_type: text_with_summary
+  link_type: 17
+  title: 1
+field_type: link

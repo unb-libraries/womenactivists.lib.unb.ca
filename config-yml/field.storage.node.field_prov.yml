@@ -1,16 +1,17 @@
-uuid: 7f5219f9-a490-41b7-a5f7-8d1ab67a5c76
+uuid: 5f1b421d-48d0-451a-8507-2131ff9d311c
 langcode: en
 status: true
 dependencies:
   module:
     - node
-    - text
-id: node.field_biography
-field_name: field_biography
+    - taxonomy
+id: node.field_prov
+field_name: field_prov
 entity_type: node
-type: text_with_summary
-settings: {  }
-module: text
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
 locked: false
 cardinality: 1
 translatable: true

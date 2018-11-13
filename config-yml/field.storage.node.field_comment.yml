@@ -1,12 +1,12 @@
-uuid: 5262e882-27eb-422f-afcf-991dfb34d3e8
+uuid: 8d3deb7d-50f4-4508-8328-676a9614cce1
 langcode: en
 status: true
 dependencies:
   module:
     - node
     - text
-id: node.field_commentary
-field_name: field_commentary
+id: node.field_comment
+field_name: field_comment
 entity_type: node
 type: text_with_summary
 settings: {  }

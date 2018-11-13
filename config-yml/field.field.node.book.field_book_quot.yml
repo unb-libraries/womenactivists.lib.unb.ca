@@ -1,14 +1,14 @@
-uuid: a2b2b8d8-5fc1-4ec5-a6e6-37d2448ff03a
+uuid: ba153c70-8911-4afc-b68c-a75d654666ea
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_quotation
-    - node.type.activist_profile
-id: node.activist_profile.field_quotation
-field_name: field_quotation
+    - field.storage.node.field_book_quot
+    - node.type.book
+id: node.book.field_book_quot
+field_name: field_book_quot
 entity_type: node
-bundle: activist_profile
+bundle: book
 label: Quotation
 description: ''
 required: false

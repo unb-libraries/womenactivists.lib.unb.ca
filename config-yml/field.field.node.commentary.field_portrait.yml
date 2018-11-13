@@ -1,20 +1,20 @@
-uuid: 40ca8f3b-40bd-4355-a0d1-4fe453768d01
+uuid: f9ced022-e63b-4742-9ad1-995aecc9664a
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_author_photo
+    - field.storage.node.field_portrait
     - node.type.commentary
   module:
     - image
-id: node.commentary.field_author_photo
-field_name: field_author_photo
+id: node.commentary.field_portrait
+field_name: field_portrait
 entity_type: node
 bundle: commentary
-label: 'Author Photo'
+label: Portrait
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

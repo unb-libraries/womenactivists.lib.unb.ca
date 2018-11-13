@@ -1,15 +1,15 @@
-uuid: fa4098a2-1b78-41d1-8b18-2823a1d59317
+uuid: 5bd96288-dcd6-4a17-8c80-abf130c31ed0
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_pictures
+    - field.storage.node.field_pics
     - node.type.activist_profile
     - paragraphs.paragraphs_type.captioned_picture
   module:
     - entity_reference_revisions
-id: node.activist_profile.field_pictures
-field_name: field_pictures
+id: node.activist_profile.field_pics
+field_name: field_pics
 entity_type: node
 bundle: activist_profile
 label: Pictures

@@ -1,13 +1,13 @@
-uuid: 84d91832-503c-4084-b004-7080376b6efe
+uuid: b6ddbb80-1dda-4379-bff8-160ee02e4b01
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_province_or_territory
+    - field.storage.node.field_prov
     - node.type.activist_profile
     - taxonomy.vocabulary.province_or_territory
-id: node.activist_profile.field_province_or_territory
-field_name: field_province_or_territory
+id: node.activist_profile.field_prov
+field_name: field_prov
 entity_type: node
 bundle: activist_profile
 label: 'Province or Territory'

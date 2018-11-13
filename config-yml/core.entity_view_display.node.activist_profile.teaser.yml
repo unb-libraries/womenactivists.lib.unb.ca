@@ -1,10 +1,11 @@
-uuid: be6d5df0-078a-4d20-9773-c089dc99594c
+uuid: 5ff7d9ed-929a-4b98-9ba8-ee87bcce4972
 langcode: en
 status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.activist_profile.field_name
+    - field.field.node.activist_profile.field_bio
+    - field.field.node.activist_profile.field_links
     - node.type.activist_profile
   module:
     - user
@@ -19,11 +20,5 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
-  field_biography: true
-  field_images: true
-  field_links_of_interest: true
-  field_name: true
-  field_portrait: true
-  field_portrait_caption: true
-  field_province_or_territory: true
-  field_quotation: true
+  field_bio: true
+  field_links: true

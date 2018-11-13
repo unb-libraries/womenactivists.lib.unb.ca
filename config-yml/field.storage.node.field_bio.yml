@@ -1,16 +1,16 @@
-uuid: 7bed07c5-a01b-4fd1-bd1e-0ece0bb4828e
+uuid: c26d3951-d78a-4ae3-b8fb-00635007e02e
 langcode: en
 status: true
 dependencies:
   module:
     - node
-id: node.field_about_the_author
-field_name: field_about_the_author
+    - text
+id: node.field_bio
+field_name: field_bio
 entity_type: node
-type: string_long
-settings:
-  case_sensitive: false
-module: core
+type: text_with_summary
+settings: {  }
+module: text
 locked: false
 cardinality: 1
 translatable: true

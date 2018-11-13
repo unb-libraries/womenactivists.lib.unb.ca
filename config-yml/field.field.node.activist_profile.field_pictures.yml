@@ -1,0 +1,31 @@
+uuid: fa4098a2-1b78-41d1-8b18-2823a1d59317
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pictures
+    - node.type.activist_profile
+    - paragraphs.paragraphs_type.captioned_picture
+  module:
+    - entity_reference_revisions
+id: node.activist_profile.field_pictures
+field_name: field_pictures
+entity_type: node
+bundle: activist_profile
+label: Pictures
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      captioned_picture: captioned_picture
+    target_bundles_drag_drop:
+      captioned_picture:
+        enabled: true
+        weight: 2
+field_type: entity_reference_revisions

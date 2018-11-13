@@ -24,5 +24,6 @@ hidden:
   field_links_of_interest: true
   field_name: true
   field_portrait: true
+  field_portrait_caption: true
   field_province_or_territory: true
   field_quotation: true

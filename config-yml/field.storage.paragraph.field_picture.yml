@@ -1,14 +1,14 @@
-uuid: 6177dac3-ab7d-435f-959a-7a9ad7363b01
+uuid: 6eaf29ae-5821-4b50-bdc9-d61aece19e2f
 langcode: en
 status: true
 dependencies:
   module:
     - file
     - image
-    - node
-id: node.field_images
-field_name: field_images
-entity_type: node
+    - paragraphs
+id: paragraph.field_picture
+field_name: field_picture
+entity_type: paragraph
 type: image
 settings:
   uri_scheme: public
@@ -23,7 +23,7 @@ settings:
   display_default: false
 module: image
 locked: false
-cardinality: -1
+cardinality: 1
 translatable: true
 indexes: {  }
 persist_with_no_fields: false

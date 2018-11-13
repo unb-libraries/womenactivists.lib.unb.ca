@@ -1,0 +1,9 @@
+uuid: 002cc4dc-064b-47cc-afb3-c5b5e387f89b
+langcode: en
+status: true
+dependencies: {  }
+id: captioned_picture
+label: 'Captioned Picture'
+icon_uuid: null
+description: 'Contains an image field and a text field for captioning. '
+behavior_plugins: {  }

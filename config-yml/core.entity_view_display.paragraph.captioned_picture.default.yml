@@ -1,0 +1,32 @@
+uuid: 850bc10e-9ec8-4f62-9dca-67306efd7166
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.captioned_picture.field_caption
+    - field.field.paragraph.captioned_picture.field_picture
+    - paragraphs.paragraphs_type.captioned_picture
+  module:
+    - image
+id: paragraph.captioned_picture.default
+targetEntityType: paragraph
+bundle: captioned_picture
+mode: default
+content:
+  field_caption:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_picture:
+    weight: 0
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+hidden: {  }

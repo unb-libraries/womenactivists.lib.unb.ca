@@ -4,9 +4,9 @@ status: true
 dependencies:
   config:
     - field.field.node.activist_profile.field_biography
-    - field.field.node.activist_profile.field_images
     - field.field.node.activist_profile.field_links_of_interest
     - field.field.node.activist_profile.field_name
+    - field.field.node.activist_profile.field_pictures
     - field.field.node.activist_profile.field_portrait
     - field.field.node.activist_profile.field_portrait_caption
     - field.field.node.activist_profile.field_province_or_territory
@@ -16,6 +16,7 @@ dependencies:
   module:
     - image
     - link
+    - paragraphs
     - text
 id: node.activist_profile.default
 targetEntityType: node
@@ -30,14 +31,6 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea_with_summary
-    region: content
-  field_images:
-    weight: 4
-    settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
-    third_party_settings: {  }
-    type: image_image
     region: content
   field_links_of_interest:
     weight: 6
@@ -54,6 +47,18 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
+  field_pictures:
+    type: entity_reference_paragraphs
+    weight: 27
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
     region: content
   field_portrait:
     weight: 1

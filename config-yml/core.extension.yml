@@ -38,6 +38,7 @@ module:
   user: 0
   views_ui: 0
   womact_install: 0
+  womact_menu: 0
   menu_link_content: 1
   views: 10
   paragraphs: 11

@@ -21,4 +21,5 @@ content:
     region: content
 hidden:
   field_about: true
+  field_comment: true
   field_portrait: true

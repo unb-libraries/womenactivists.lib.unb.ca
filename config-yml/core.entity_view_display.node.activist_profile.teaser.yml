@@ -21,4 +21,9 @@ content:
     region: content
 hidden:
   field_bio: true
+  field_caption: true
   field_links: true
+  field_pics: true
+  field_portrait: true
+  field_prov: true
+  field_quot: true

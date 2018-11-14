@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.book.field_book_quot
     - node.type.book
   module:
+    - path
     - text
 _core:
   default_config_hash: H1OKi53WidZbjVbzIreUknr_87Ln_lveBQ1RojZKUQA
@@ -32,6 +33,12 @@ content:
     third_party_settings: {  }
     type: string_textarea
     region: content
+  path:
+    type: path
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   status:
     type: boolean_checkbox
     settings:
@@ -49,7 +56,6 @@ content:
     third_party_settings: {  }
 hidden:
   created: true
-  path: true
   promote: true
   sticky: true
   uid: true

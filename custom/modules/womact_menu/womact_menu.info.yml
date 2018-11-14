@@ -1,0 +1,5 @@
+name: WOMACT Main Menu
+type: module
+description: Core functionality extension for womenactivists.lib.unb.ca
+core: 8.x
+package: WOMACT Custom

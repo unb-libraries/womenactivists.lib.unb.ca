@@ -1,0 +1,35 @@
+womact_menu.home:
+  title: 'Home'
+  description: 'Home'
+  parent: main
+  menu_name: main
+  url: internal:/
+  weight: 10
+womact_menu.about:
+  title: 'About'
+  description: 'About'
+  parent: main
+  menu_name: main
+  url: internal:/about
+  weight: 20
+womact_menu.activists:
+  title: 'Activists'
+  description: 'Activists'
+  parent: main
+  menu_name: main
+  url: internal:/activists
+  weight: 30
+womact_menu.commentaries:
+  title: 'Commentaries'
+  description: 'Commentaries'
+  parent: main
+  menu_name: main
+  url: internal:/commentaries
+  weight: 40
+womact_menu.bibliography:
+  title: 'Bibliography'
+  description: 'Bibliography'
+  parent: main
+  menu_name: main
+  url: internal:/bibliography
+  weight: 50

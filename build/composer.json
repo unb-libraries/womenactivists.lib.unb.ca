@@ -122,6 +122,8 @@
         "drupal/features": "3.8",
         "drupal/inline_entity_form": "1.0-rc1",
         "drupal/paragraphs": "1.5",
+        "drupal/views_slideshow": "4.6",
+        "drupal/views_cycle": "4.6",
         "drush/drush": "^9.5.2",
         "malsup/cycle": "3.0.3",
         "tobia/Pause": "1.0",

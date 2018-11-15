@@ -125,7 +125,7 @@
         "drush/drush": "^9.5.2",
         "malsup/cycle": "3.0.3",
         "tobia/Pause": "1.0",
-        "webflo/drupal-finder": "^0.3.0",
+        "webflo/drupal-finder": "^1.1",
         "webmozart/path-util": "^2.3"
     },
     "require-dev": {

@@ -131,7 +131,7 @@
         "drupal/views_slideshow": "4.6",
         "drush/drush": "^9.5.2",
         "malsup/cycle": "3.0.3",
-        "tobia/Pause": "1.0",
+        "tobia/Pause": "0.1",
         "webflo/drupal-finder": "^1.1",
         "webmozart/path-util": "^2.3"
     },

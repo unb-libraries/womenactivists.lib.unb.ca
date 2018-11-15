@@ -57,10 +57,13 @@
         {
             "package": {
                 "dist": {
-                    "type": "zip",
-                    "url": "https://github.com/malsup/cycle/archive/3.0.3.zip"
+                    "type": "file",
+                    "url": "https://raw.githubusercontent.com/malsup/cycle/master/jquery.cycle.all.js"
                 },
                 "name": "malsup/cycle",
+                "require": {
+                    "composer/installers": "^1.6.0"
+                },
                 "type": "drupal-library",
                 "version": "3.0.3"
             },
@@ -70,7 +73,7 @@
             "package": {
                 "dist": {
                     "type": "file",
-                    "url": "https://github.com/douglascrockford/JSON-js/blob/master/json2.js"
+                    "url": "https://raw.githubusercontent.com/douglascrockford/JSON-js/master/json2.js"
                 },
                 "name": "douglascrockford/json2",
                 "require": {
@@ -85,24 +88,27 @@
             "package": {
                 "dist": {
                     "type": "file",
-                    "url": "https://github.com/tobia/Pause/blob/master/jquery.pause.js"
+                    "url": "https://raw.githubusercontent.com/tobia/Pause/master/jquery.pause.js"
                 },
                 "name": "tobia/Pause",
                 "require": {
                     "composer/installers": "^1.6.0"
                 },
                 "type": "drupal-library",
-                "version": "1.0"
+                "version": "0.1"
             },
             "type": "package"
         },
         {
             "package": {
                 "dist": {
-                    "type": "zip",
-                    "url": "https://github.com/briancherne/jquery-hoverIntent/archive/v1.9.0.zip"
+                    "type": "file",
+                    "url": "https://raw.githubusercontent.com/briancherne/jquery-hoverIntent/master/jquery.hoverIntent.js"
                 },
                 "name": "briancherne/jquery-hoverIntent",
+                "require": {
+                    "composer/installers": "^1.6.0"
+                },
                 "type": "drupal-library",
                 "version": "1.9.0"
             },

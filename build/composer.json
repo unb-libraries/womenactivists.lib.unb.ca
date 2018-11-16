@@ -69,11 +69,42 @@
             },
             "type": "package"
         },
+        {
+            "package": {
+                "dist": {
+                    "type": "file",
+                    "url": "https://briancherne.github.io/jquery-hoverIntent/jquery.hoverIntent.js"
+                },
+                "name": "briancherne/jquery.hoverIntent",
+                "require": {
+                    "composer/installers": "^1.6.0"
+                },
+                "type": "drupal-library",
+                "version": "1.0"
+            },
+            "type": "package"
+        },
+        {
+            "package": {
+                "dist": {
+                    "type": "file",
+                    "url": "https://cdnjs.cloudflare.com/ajax/libs/json2/20160511/json2.js"
+                },
+                "name": "cdnjs/json2",
+                "require": {
+                    "composer/installers": "^1.6.0"
+                },
+                "type": "drupal-library",
+                "version": "1.0"
+            },
+            "type": "package"
+        }
     ],
     "require": {
+        "briancherne/jquery.hoverIntent": "1.0",
+        "cdnjs/json2": "1.0",
         "composer/installers": "^1.6.0",
         "cweagans/composer-patches": "1.6.5",
-        "douglascrockford/json2": "1.0",
         "drupal-composer/drupal-scaffold": "2.5.4",
         "drupal/chosen": "2.1",
         "drupal/config_update": "1.5",
@@ -84,7 +115,7 @@
         "drupal/paragraphs": "1.5",
         "drupal/views_slideshow": "4.6",
         "drush/drush": "^9.5.2",
-        "malsup/cycle": "1.0",
+        "malsup/jquery.cycle": "1.0",
         "webflo/drupal-finder": "^1.1",
         "webmozart/path-util": "^2.3"
     },

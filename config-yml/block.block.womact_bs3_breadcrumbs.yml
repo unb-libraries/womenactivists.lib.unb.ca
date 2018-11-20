@@ -1,0 +1,22 @@
+uuid: ca0ae81e-428e-4435-b899-68c431d07091
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - womact_bs3
+_core:
+  default_config_hash: wDR9JKEATSWldBjw8du8s3G2zjEYeQf88nlld11hMLo
+id: womact_bs3_breadcrumbs
+theme: womact_bs3
+region: header
+weight: -100
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  provider: system
+  label_display: '0'
+visibility: {  }

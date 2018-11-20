@@ -1,11 +1,11 @@
 uuid: 2a45ae15-13ee-480c-8389-177be66b8d67
-name: Site-Install
+name: 'Women Social Activists of Atlantic Canada'
 mail: libsupport@unb.ca
 slogan: ''
 page:
   403: ''
   404: ''
-  front: /node
+  front: /slideshow
 admin_compact_mode: false
 weight_select_max: 100
 langcode: en

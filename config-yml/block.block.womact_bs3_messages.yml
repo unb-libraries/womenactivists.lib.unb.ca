@@ -1,0 +1,22 @@
+uuid: 0cfd4233-dac6-476b-80bb-af4b5ee8c5c2
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - womact_bs3
+_core:
+  default_config_hash: 9RnnTUBcn0WRWXfrGOnId2H0Q31uQUeu_F5TnDxl2yg
+id: womact_bs3_messages
+theme: womact_bs3
+region: header
+weight: -50
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

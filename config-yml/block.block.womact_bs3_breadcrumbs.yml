@@ -1,6 +1,6 @@
 uuid: ca0ae81e-428e-4435-b899-68c431d07091
 langcode: en
-status: true
+status: false
 dependencies:
   module:
     - system
@@ -11,7 +11,7 @@ _core:
 id: womact_bs3_breadcrumbs
 theme: womact_bs3
 region: header
-weight: -100
+weight: -2
 provider: null
 plugin: system_breadcrumb_block
 settings:

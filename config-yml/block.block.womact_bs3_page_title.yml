@@ -9,7 +9,7 @@ _core:
 id: womact_bs3_page_title
 theme: womact_bs3
 region: header
-weight: 0
+weight: -5
 provider: null
 plugin: page_title_block
 settings:

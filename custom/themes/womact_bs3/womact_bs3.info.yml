@@ -9,7 +9,6 @@ libraries:
   - womact_bs3/global-styling
 
 regions:
-  branding: 'Branding'
   navigation: 'Navigation'
   navigation_collapsible: 'Navigation (Collapsible)'
   header: 'Top Bar'

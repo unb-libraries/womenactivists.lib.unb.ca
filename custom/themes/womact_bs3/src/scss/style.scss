@@ -1,7 +1,7 @@
 // Colour palette
 $lavender:  #d8b8f8;
 $purple:    #360963;
-$sand:      #fce0a8;
+$sand:      #fff5d2;
 
 // No rounded borders
 .dialog-off-canvas-main-canvas * {
@@ -17,4 +17,9 @@ $sand:      #fce0a8;
   -webkit-box-shadow: none !important;
   -moz-box-shadow: none !important;
   box-shadow: none !important;
+}
+
+// Main site colours
+div[role="main"] {
+  background: $sand;
 }

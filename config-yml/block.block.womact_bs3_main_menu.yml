@@ -13,7 +13,7 @@ _core:
 id: womact_bs3_main_menu
 theme: womact_bs3
 region: navigation_collapsible
-weight: 10
+weight: -6
 provider: null
 plugin: 'system_menu_block:main'
 settings:

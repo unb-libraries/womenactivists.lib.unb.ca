@@ -1,6 +1,6 @@
 uuid: a31968ad-6feb-4b7f-9062-43bd23916f84
 langcode: en
-status: false
+status: true
 dependencies:
   config:
     - system.menu.account
@@ -12,8 +12,8 @@ _core:
   default_config_hash: R2K_qX0ZUMbUL6ie_-S9tZVjvqmlWKlscikgeRv9vhw
 id: womact_bs3_account_menu
 theme: womact_bs3
-region: navigation_collapsible
-weight: 11
+region: footer
+weight: -5
 provider: null
 plugin: 'system_menu_block:account'
 settings:

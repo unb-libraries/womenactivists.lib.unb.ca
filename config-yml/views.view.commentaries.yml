@@ -1,18 +1,18 @@
-uuid: a8a3445d-aa8f-4698-93ba-22c489fb0a2f
+uuid: cc2f1d8c-311a-4ebc-b763-8429a57f257a
 langcode: en
 status: true
 dependencies:
   config:
+    - field.storage.node.field_about
     - field.storage.node.field_portrait
-    - image.style.medium
-    - node.type.activist_profile
+    - node.type.commentary
   module:
     - image
     - node
+    - text
     - user
-    - views_slideshow
-id: slideshow
-label: Slideshow
+id: commentaries
+label: Commentaries
 module: views
 description: ''
 tag: ''
@@ -57,7 +57,7 @@ display:
           items_per_page: null
           offset: 0
       style:
-        type: slideshow
+        type: default
       row:
         type: fields
       fields:
@@ -112,8 +112,8 @@ display:
           click_sort_column: target_id
           type: image
           settings:
-            image_style: medium
-            image_link: content
+            image_style: ''
+            image_link: ''
           group_column: ''
           group_columns: {  }
           group_rows: true
@@ -172,6 +172,68 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+        field_about:
+          id: field_about
+          table: node__field_about
+          field: field_about
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: strong
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: text_default
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
       filters:
         status:
           value: '1'
@@ -189,12 +251,12 @@ display:
           table: node_field_data
           field: type
           value:
-            activist_profile: activist_profile
+            commentary: commentary
           entity_type: node
           entity_field: type
           plugin_id: bundle
       sorts: {  }
-      title: Slideshow
+      title: Commentaries
       header:
         area:
           id: area
@@ -206,10 +268,23 @@ display:
           empty: false
           tokenize: false
           content:
-            value: '<h1>Profiles of Wisdom</h1>'
+            value: "These Commentaries add three interpretations of the profiles and prompt you into further reflections and some relevant literature.\r\n\r\nHaving seen an early version of the website, three distinguished younger colleagues in the academic field of Adult Education in Canada kindly agreed to contribute to the project. They, with Liz, discussed how each Commentary might be structured. The final decision was to use three guiding questions:\r\n\r\n<ul>\r\n<li>What did I get out of the profiles?</li>\r\n<li>Where does the practical knowledge of the elders link to some relevant academic knowledge?</li>\r\n<li>How might the website be expanded internationally and inter-generationally?</li>\r\n</ul>\r\n\r\n&nbsp;"
             format: basic_html
           plugin_id: text
-      footer: {  }
+      footer:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          tokenize: false
+          content:
+            value: '&nbsp;'
+            format: basic_html
+          plugin_id: text
       empty: {  }
       relationships: {  }
       arguments: {  }
@@ -222,6 +297,7 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
+        - 'config:field.storage.node.field_about'
         - 'config:field.storage.node.field_portrait'
   page_1:
     display_plugin: page
@@ -230,7 +306,7 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      path: slideshow
+      path: commentaries
     cache_metadata:
       max-age: -1
       contexts:
@@ -239,4 +315,5 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
+        - 'config:field.storage.node.field_about'
         - 'config:field.storage.node.field_portrait'

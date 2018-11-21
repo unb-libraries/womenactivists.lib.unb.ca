@@ -1,0 +1,20 @@
+uuid: 5fd9ccdc-7cbb-412a-bba6-117f6a1043e8
+langcode: en
+status: true
+dependencies:
+  module:
+    - womact_static
+  theme:
+    - womact_bs3
+id: womactfooter
+theme: womact_bs3
+region: footer
+weight: 0
+provider: null
+plugin: womact_footer
+settings:
+  id: womact_footer
+  label: 'WOMACT Footer'
+  provider: womact_static
+  label_display: '0'
+visibility: {  }

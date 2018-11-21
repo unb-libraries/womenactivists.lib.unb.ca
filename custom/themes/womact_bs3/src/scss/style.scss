@@ -2,6 +2,7 @@
 $lavender:  #9c6cac;
 $purple:    #2a0038;
 $sand:      #fffcde;
+$gray:      #7c7c7c;
 
 // Global
 
@@ -54,11 +55,19 @@ body {
   width: auto;
 }
 
+#slide-profiles h2 {
+  font-size: 1.4em;
+  margin-bottom: 0px;
+  font-weight: normal;
+  color: $gray;
+}
+
 #slide-text {
   padding-top: 10%;
 }
 
 #slide-name {
+  line-height: 1.2em;
   font-size: 2.5em;
 }
 
@@ -70,6 +79,7 @@ body {
 }
 
 #slide-portrait {
+  float: right;
   padding: 0px;
   width: initial;
 

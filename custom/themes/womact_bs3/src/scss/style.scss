@@ -1,7 +1,9 @@
 // Colour palette
-$lavender:  #d8b8f8;
-$purple:    #360963;
-$sand:      #fff5d2;
+$lavender:  #bc9cdc;
+$purple:    #1a0048;
+$sand:      #fffcde;
+
+// Global
 
 // No rounded borders
 .dialog-off-canvas-main-canvas * {
@@ -19,7 +21,40 @@ $sand:      #fff5d2;
   box-shadow: none !important;
 }
 
-// Main site colours
+// Body
+body {
+  background: $purple;
+  margin-top: 0px;
+}
+
+// Navbar
+#navbar {
+  width: auto;
+  max-width: none;
+  border: none;
+  background: $lavender;
+  margin-bottom: 60px;
+}
+
+#navbar * {
+  color: white;
+}
+
+#navbar .menu.menu--main.nav.navbar-nav {
+  float: right;
+}
+
+// Page
 div[role="main"] {
+  width: auto;
   background: $sand;
+}
+
+.page-header {
+  border: none;
+}
+
+// Footer
+.footer.container {
+  border: none;
 }

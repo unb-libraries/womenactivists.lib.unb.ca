@@ -20,8 +20,9 @@ class WomactFooter extends BlockBase {
    */
   public function build() {
     $text = '<p id="womact-footer">© 2018<br>This work is licensed under a Creative Commons
-    Attribution-NonCommercial 2.5 Canada License.<br>Maintained by UNB Libraries, University
-    of New Brunswick.<br>For inquiries about licensing rights please contact
+    Attribution-NonCommercial 2.5 Canada License.<br>Maintained by
+    <a href="https://lib.unb.ca">UNB Libraries</a>, <a href="https://unb.ca">University
+    of New Brunswick</a>.<br>For inquiries about licensing rights please contact
     us.</p>';
 
     return [

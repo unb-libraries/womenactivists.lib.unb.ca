@@ -59,7 +59,6 @@ body {
   font-size: 1.4em;
   margin-bottom: 0px;
   font-weight: normal;
-  color: $gray;
 }
 
 #slide-text {
@@ -92,6 +91,7 @@ body {
 div[role="main"] {
   width: auto;
   background: $sand;
+  color: $gray;
 
   [role="heading"] {
     background: $purple;

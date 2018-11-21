@@ -50,6 +50,10 @@ body {
 }
 
 // Slideshow
+#slide {
+  width: auto;
+}
+
 #slide-text {
   padding-top: 10%;
 }
@@ -60,18 +64,20 @@ body {
 
 #slide-bio {
   padding-top: 1em;
-  padding-bottom: 1em;
+  padding-bottom: 2em;
   padding-right: 3em;
   text-align: justify;
 }
 
 #slide-portrait {
   padding: 0px;
+  width: initial;
 
   img {
     height: 380px;
   }
 }
+
 // Page
 div[role="main"] {
   width: auto;

@@ -1,9 +1,14 @@
 // Colour palette
-$lavender:  #bc9cdc;
-$purple:    #1a0048;
+$lavender:  #ac7cbc;
+$purple:    #2a0038;
 $sand:      #fffcde;
 
 // Global
+
+// Links
+.dialog-off-canvas-main-canvas a {
+  color: $lavender;
+}
 
 // No rounded borders
 .dialog-off-canvas-main-canvas * {
@@ -62,6 +67,10 @@ body {
 
 #slide-portrait {
   padding: 0px;
+
+  img {
+    height: 100%;
+  }
 }
 // Page
 div[role="main"] {

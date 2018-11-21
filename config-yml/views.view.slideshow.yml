@@ -259,21 +259,8 @@ display:
           entity_field: type
           plugin_id: bundle
       sorts: {  }
-      title: Slideshow
-      header:
-        area:
-          id: area
-          table: views
-          field: area
-          relationship: none
-          group_type: group
-          admin_label: ''
-          empty: false
-          tokenize: false
-          content:
-            value: '<h1>Profiles of Wisdom</h1>'
-            format: basic_html
-          plugin_id: text
+      title: 'Profiles of Wisdom'
+      header: {  }
       footer: {  }
       empty: {  }
       relationships: {  }

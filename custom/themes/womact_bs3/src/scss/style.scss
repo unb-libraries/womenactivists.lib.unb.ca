@@ -44,6 +44,25 @@ body {
   color: white;
 }
 
+// Slideshow
+#slide-text {
+  padding-top: 10%;
+}
+
+#slide-name {
+  font-size: 3em;
+}
+
+#slide-bio {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  padding-right: 3em;
+  text-align: justify;
+}
+
+#slide-portrait {
+  padding: 0px;
+}
 // Page
 div[role="main"] {
   width: auto;

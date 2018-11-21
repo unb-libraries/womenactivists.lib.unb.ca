@@ -33,21 +33,29 @@ body {
   max-width: none;
   border: none;
   background: $lavender;
-  margin-bottom: 60px;
+  margin-bottom: 45px;
+
+  .menu.menu--main.nav.navbar-nav {
+    float: right;
+  }
 }
 
 #navbar * {
   color: white;
 }
 
-#navbar .menu.menu--main.nav.navbar-nav {
-  float: right;
-}
-
 // Page
 div[role="main"] {
   width: auto;
   background: $sand;
+
+  [role="heading"] {
+    background: $purple;
+  }
+
+  > .row > section {
+    padding: 0% 12%;
+  }
 }
 
 .page-header {

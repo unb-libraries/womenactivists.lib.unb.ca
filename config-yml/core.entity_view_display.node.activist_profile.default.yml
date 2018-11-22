@@ -24,20 +24,20 @@ mode: default
 content:
   field_bio:
     weight: 3
-    label: above
+    label: visually_hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_caption:
     weight: 1
-    label: above
+    label: visually_hidden
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
   field_links:
-    weight: 6
+    weight: 5
     label: above
     settings:
       trim_length: 80
@@ -51,7 +51,7 @@ content:
   field_pics:
     type: entity_reference_revisions_entity_view
     weight: 4
-    label: above
+    label: visually_hidden
     settings:
       view_mode: default
       link: ''
@@ -59,27 +59,20 @@ content:
     region: content
   field_portrait:
     weight: 0
-    label: above
+    label: visually_hidden
     settings:
       image_style: ''
       image_link: ''
     third_party_settings: {  }
     type: image
     region: content
-  field_prov:
-    weight: 5
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
   field_quot:
     weight: 2
-    label: above
+    label: visually_hidden
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
 hidden:
+  field_prov: true
   links: true

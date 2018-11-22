@@ -88,6 +88,10 @@ body {
 }
 
 // Page
+h1.page-header {
+  color: $lavender;
+}
+
 nav[role="navigation"] > .tabs--primary.nav.nav-tabs a.is-active,
 nav[role="navigation"] > .tabs--primary.nav.nav-tabs a:hover {
   background-color: $sand;
@@ -119,4 +123,13 @@ div[role="main"] {
 #womact-footer {
   text-align: center;
   color: $lavender;
+}
+
+/* Responsive */
+@media (max-width: 1007px) {
+
+  #slide-portrait {
+    float: left;
+    margin-bottom: 2em;
+  }
 }

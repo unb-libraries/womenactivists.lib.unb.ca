@@ -88,6 +88,11 @@ body {
 }
 
 // Page
+nav[role="navigation"] > .tabs--primary.nav.nav-tabs a.is-active,
+nav[role="navigation"] > .tabs--primary.nav.nav-tabs a:hover {
+  background-color: $sand;
+  border: 1px solid $sand;
+}
 div[role="main"] {
   width: auto;
   background: $sand;

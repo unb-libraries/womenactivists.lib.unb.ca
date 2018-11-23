@@ -118,11 +118,10 @@ div[role="main"] {
   border: none;
 }
 
-// Activist Profile node view
-.content.profile > .field,
-.content.profile .paragraph,
-.content.profile > blockquote,
-.content.profile > nav {
+.content > .field,
+.content .paragraph,
+.content > blockquote,
+.content > nav {
   margin-top: 2em !important;
 }
 

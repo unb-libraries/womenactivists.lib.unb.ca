@@ -95,8 +95,18 @@
     </footer>
   {% endif %}
 
-  <div{{ content_attributes.addClass('content') }}>
-    {{ content }}
+  <div{{ content_attributes.addClass('content profile') }}>
+    {{ content.field_portrait }}
+    {{ content.field_portrait_caption }}
+
+    {% if content.field_quot['#title'] is not empty %}
+      <blockquote>{{ content.field_quot }}</blockquote>
+    {% endif %}
+
+    {{ content.field_bio }}
+    {{ content.field_pics }}
+    {{ content.field_links }}
+    {{ content.book_navigation }}
   </div>
 
 </article>

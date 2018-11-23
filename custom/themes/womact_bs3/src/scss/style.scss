@@ -115,6 +115,18 @@ div[role="main"] {
   border: none;
 }
 
+// Activist Profile node view
+.content.profile > .field,
+.content.profile .paragraph,
+.content.profile > blockquote {
+  margin-top: 2em !important;
+}
+
+// Book pages
+.content nav > h2 {
+  visibility: hidden;
+}
+
 // Footer
 .footer.container {
   border: none;

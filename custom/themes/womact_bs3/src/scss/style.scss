@@ -5,6 +5,9 @@ $sand:      #fffcde;
 $gray:      #7c7c7c;
 
 // Global
+p {
+  text-align: justify;
+}
 
 // Links
 .dialog-off-canvas-main-canvas a {
@@ -118,13 +121,19 @@ div[role="main"] {
 // Activist Profile node view
 .content.profile > .field,
 .content.profile .paragraph,
-.content.profile > blockquote {
+.content.profile > blockquote,
+.content.profile > nav {
   margin-top: 2em !important;
 }
 
 // Book pages
 .content nav > h2 {
   visibility: hidden;
+}
+
+.content nav ul {
+  border-top: 1px solid $gray;
+  padding-top: 1em;
 }
 
 // Footer

@@ -126,6 +126,13 @@ div[role="main"] {
 }
 
 /* Responsive */
+
+/* Collapsed nav */
+button.navbar-toggle > span {
+  background-color: white !important;
+}
+
+/* Display sizes */
 @media (max-width: 1007px) {
 
   #slide-portrait {

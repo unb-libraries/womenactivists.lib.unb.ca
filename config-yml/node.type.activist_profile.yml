@@ -13,5 +13,5 @@ type: activist_profile
 description: "Profile of an activist.\r\n"
 help: ''
 new_revision: false
-preview_mode: 2
+preview_mode: 0
 display_submitted: false

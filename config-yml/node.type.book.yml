@@ -18,5 +18,5 @@ type: book
 description: '<em>Books</em> have a built-in hierarchical navigation. Use for handbooks or tutorials.'
 help: ''
 new_revision: false
-preview_mode: 1
+preview_mode: 0
 display_submitted: false

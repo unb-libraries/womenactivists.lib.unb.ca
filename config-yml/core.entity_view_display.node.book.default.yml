@@ -17,7 +17,7 @@ bundle: book
 mode: default
 content:
   body:
-    label: hidden
+    label: visually_hidden
     type: text_default
     weight: 0
     region: content
@@ -25,7 +25,7 @@ content:
     third_party_settings: {  }
   field_book_quot:
     weight: 1
-    label: above
+    label: visually_hidden
     settings: {  }
     third_party_settings: {  }
     type: basic_string

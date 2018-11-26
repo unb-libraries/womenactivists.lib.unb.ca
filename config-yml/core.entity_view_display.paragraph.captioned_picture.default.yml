@@ -15,14 +15,14 @@ mode: default
 content:
   field_caption:
     weight: 1
-    label: above
+    label: visually_hidden
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
   field_picture:
     weight: 0
-    label: above
+    label: visually_hidden
     settings:
       image_style: ''
       image_link: ''

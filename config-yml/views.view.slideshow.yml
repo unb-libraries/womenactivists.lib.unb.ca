@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.storage.node.field_bio
     - field.storage.node.field_portrait
+    - image.style.slide_portrait
     - node.type.activist_profile
   module:
     - image
@@ -190,7 +191,7 @@ display:
           click_sort_column: target_id
           type: image
           settings:
-            image_style: ''
+            image_style: slide_portrait
             image_link: content
           group_column: ''
           group_columns: {  }

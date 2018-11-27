@@ -1,0 +1,15 @@
+uuid: cf724c2c-c1c8-4760-91ab-f42f12c01a95
+langcode: en
+status: true
+dependencies: {  }
+name: slide_portrait
+label: 'Slide Portrait (300x380)'
+effects:
+  1ef8a0c7-db77-4515-9a74-066f2b7e0c18:
+    uuid: 1ef8a0c7-db77-4515-9a74-066f2b7e0c18
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 300
+      height: 380
+      anchor: center-center

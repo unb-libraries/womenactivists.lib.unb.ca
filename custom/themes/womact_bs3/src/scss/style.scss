@@ -84,10 +84,6 @@ body {
   float: right;
   padding: 0px;
   width: initial;
-
-  img {
-    height: 380px;
-  }
 }
 
 // Page
@@ -100,6 +96,7 @@ nav[role="navigation"] > .tabs--primary.nav.nav-tabs a:hover {
   background-color: $sand;
   border: 1px solid $sand;
 }
+
 div[role="main"] {
   width: auto;
   background: $sand;
@@ -158,5 +155,12 @@ button.navbar-toggle > span {
   #slide-portrait {
     float: left;
     margin-bottom: 2em;
+  }
+}
+
+@media (min-width: 1600px) {
+
+  div[role="main"] > .row > section {
+      padding: 0% 22%;
   }
 }

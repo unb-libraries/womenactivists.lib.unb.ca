@@ -268,7 +268,7 @@ display:
           empty: false
           tokenize: false
           content:
-            value: "These Commentaries add three interpretations of the profiles and prompt you into further reflections and some relevant literature.\r\n\r\nHaving seen an early version of the website, three distinguished younger colleagues in the academic field of Adult Education in Canada kindly agreed to contribute to the project. They, with Liz, discussed how each Commentary might be structured. The final decision was to use three guiding questions:\r\n\r\n<ul>\r\n<li>What did I get out of the profiles?</li>\r\n<li>Where does the practical knowledge of the elders link to some relevant academic knowledge?</li>\r\n<li>How might the website be expanded internationally and inter-generationally?</li>\r\n</ul>\r\n\r\n&nbsp;"
+            value: "<p>These Commentaries add three interpretations of the profiles and prompt you into further reflections and some relevant literature.</p>\r\n\r\n<p>Having seen an early version of the website, three distinguished younger colleagues in the academic field of Adult Education in Canada kindly agreed to contribute to the project. They, with Liz, discussed how each Commentary might be structured. The final decision was to use three guiding questions:</p>\r\n\r\n<ul>\r\n<li>What did I get out of the profiles?</li>\r\n<li>Where does the practical knowledge of the elders link to some relevant academic knowledge?</li>\r\n<li>How might the website be expanded internationally and inter-generationally?</li>\r\n</ul>\r\n\r\n&nbsp;"
             format: basic_html
           plugin_id: text
       footer:

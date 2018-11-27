@@ -25,14 +25,14 @@ content:
     region: content
   field_comment:
     weight: 3
-    label: above
+    label: visually_hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_portrait:
     weight: 1
-    label: above
+    label: visually_hidden
     settings:
       image_style: ''
       image_link: ''

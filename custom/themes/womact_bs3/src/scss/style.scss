@@ -132,6 +132,15 @@ div[role="main"] {
   padding-top: 1em;
 }
 
+// Commentaries view
+.view-id-commentaries.view-display-id-page_1 {
+  padding: 2em 0em;
+
+  .views-row {
+    padding-top: 2em;
+  }
+}
+
 // Footer
 .footer.container {
   border: none;

@@ -139,6 +139,10 @@ div[role="main"] {
   .views-row {
     padding-top: 2em;
   }
+
+  .view-header {
+    border-bottom: 1px solid $gray;
+  }
 }
 
 // Footer

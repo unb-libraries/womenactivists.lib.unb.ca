@@ -1,5 +1,5 @@
 // Colour palette
-$lavender:  #9c6cac;
+$lavender:  #ac7cbc;
 $purple:    #2a0038;
 $sand:      #fffcde;
 $gray:      #7c7c7c;
@@ -46,6 +46,10 @@ body {
 
   .menu.menu--main.nav.navbar-nav {
     float: right;
+  }
+
+  li:hover, li:active {
+    background-color: $purple;
   }
 }
 
@@ -149,6 +153,13 @@ div[role="main"] {
   .view-header {
     border-bottom: 1px solid $gray;
   }
+}
+
+// Activists view
+#activist-result {
+  width: 100%;
+  padding: 2em 0;
+  border-bottom: 1px solid $gray;
 }
 
 // Footer

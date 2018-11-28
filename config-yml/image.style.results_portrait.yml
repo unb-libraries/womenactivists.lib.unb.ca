@@ -1,0 +1,15 @@
+uuid: e7684ef4-3fed-45fb-a40b-d06e15487c98
+langcode: en
+status: true
+dependencies: {  }
+name: results_portrait
+label: 'Results Portrait  (150x190)'
+effects:
+  27a0f822-8277-4567-83d9-0d0ea51ff000:
+    uuid: 27a0f822-8277-4567-83d9-0d0ea51ff000
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 150
+      height: 190
+      anchor: center-center

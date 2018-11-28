@@ -132,6 +132,12 @@ div[role="main"] {
   padding-top: 1em;
 }
 
+#book-nav {
+  width: 100%;
+  border-top: 1px solid $gray;
+  padding: 1em;
+}
+
 // Commentaries view
 .view-id-commentaries.view-display-id-page_1 {
   padding: 2em 0em;

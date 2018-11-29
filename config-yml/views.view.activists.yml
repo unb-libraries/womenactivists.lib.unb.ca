@@ -7,6 +7,7 @@ dependencies:
     - field.storage.node.field_portrait
     - image.style.results_portrait
     - node.type.activist_profile
+    - taxonomy.vocabulary.province_or_territory
   module:
     - image
     - node
@@ -347,9 +348,67 @@ display:
           entity_type: node
           entity_field: type
           plugin_id: bundle
+        tid:
+          id: tid
+          table: taxonomy_index
+          field: tid
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: tid_op
+            label: 'Browse by Province'
+            description: ''
+            use_operator: false
+            operator: tid_op
+            identifier: tid
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          type: select
+          limit: true
+          vid: province_or_territory
+          hierarchy: false
+          error_message: true
+          plugin_id: taxonomy_index_tid
       sorts: {  }
       title: Activists
-      header: {  }
+      header:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          tokenize: false
+          content:
+            value: "<p>Introducing the experience, values, lessons, skills and advice of elder Atlantic Canadian women. Each one carries decades of work toward creating change in how society operates.</p>\r\n\r\n<p><a href=\"activists\">Browse all the activists</a> or narrow the list by province:</p>"
+            format: basic_html
+          plugin_id: text
       footer: {  }
       empty: {  }
       relationships: {  }
@@ -399,6 +458,7 @@ display:
         - 'languages:language_interface'
         - url
         - url.query_args
+        - user
         - 'user.node_grants:view'
         - user.permissions
       tags:
@@ -419,6 +479,7 @@ display:
         - 'languages:language_interface'
         - url
         - url.query_args
+        - user
         - 'user.node_grants:view'
         - user.permissions
       tags:

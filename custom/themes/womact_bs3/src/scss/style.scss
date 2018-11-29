@@ -172,6 +172,10 @@ div[role="main"] {
 
   .views-row {
     padding-top: 2em;
+
+    .views-field.views-field-title {
+      font-size: 1.4em;
+    }
   }
 
   .view-header {
@@ -186,6 +190,9 @@ div[role="main"] {
   border-top: 1px solid $gray;
 }
 
+#activist-res-txt a {
+  font-size: 1.4em;
+}
 // Footer
 .footer.container {
   border: none;

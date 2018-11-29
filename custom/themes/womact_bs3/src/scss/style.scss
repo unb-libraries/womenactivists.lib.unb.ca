@@ -195,9 +195,7 @@ div[role="main"] {
 }
 
 .view-id-activists .pagination.js-pager__items a {
-  &:hover, &:focus {
-    color: $lavender !important;
-  }
+  color: $lavender !important;
 
   &.active, &.is-active {
     background-color: $lavender !important;

@@ -193,6 +193,15 @@ div[role="main"] {
 #activist-res-txt a {
   font-size: 1.4em;
 }
+
+.view-id-activists .pagination.js-pager__items {
+  color: $lavender;
+
+  &.active, &.is-active {
+    background-color: $lavender;
+  }
+}
+
 // Footer
 .footer.container {
   border: none;

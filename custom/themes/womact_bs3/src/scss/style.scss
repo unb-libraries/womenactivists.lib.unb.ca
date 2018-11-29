@@ -194,8 +194,8 @@ div[role="main"] {
   font-size: 1.4em;
 }
 
-.view-id-activists .pagination.js-pager__items {
-  a, a:hover, a:focus {
+.view-id-activists .pagination.js-pager__items a {
+  &:hover, &:focus {
     color: $lavender !important;
   }
 

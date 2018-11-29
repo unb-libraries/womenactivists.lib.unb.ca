@@ -17,7 +17,7 @@ content:
     type: text_default
     weight: 1
     region: content
-    label: above
+    label: visually_hidden
     settings: {  }
     third_party_settings: {  }
   links:

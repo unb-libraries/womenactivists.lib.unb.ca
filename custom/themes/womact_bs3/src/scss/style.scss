@@ -14,6 +14,30 @@ p {
   color: $lavender;
 }
 
+// Buttons
+.dialog-off-canvas-main-canvas button {
+  border: 1px solid $gray;
+  background-color: $gray;
+
+  &:hover, &:focus,
+  .btn:hover, .btn:focus {
+    border: 1px solid $lavender;
+    outline: none !important;
+    background-color: $lavender;
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    transition: none !important;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    box-shadow: none !important;
+
+    &:active, .btn:active {
+      border: 1px solid $purple;
+      background: $purple;
+    }
+  }
+}
+
 // No rounded borders
 .dialog-off-canvas-main-canvas * {
   border-radius: 0px;
@@ -21,7 +45,7 @@ p {
 
 // Override Bootstrap form control glows/shadows
 .dialog-off-canvas-main-canvas input:focus, select:focus, textarea:focus {
-  border-color: initial !important;
+  border-color: $gray !important;
   -webkit-transition: none !important;
   -moz-transition: none !important;
   transition: none !important;
@@ -159,7 +183,7 @@ div[role="main"] {
 #activist-result {
   width: 100%;
   padding: 2em 0;
-  border-bottom: 1px solid $gray;
+  border-top: 1px solid $gray;
 }
 
 // Footer

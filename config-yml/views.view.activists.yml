@@ -361,8 +361,8 @@ display:
           exposed: true
           expose:
             operator_id: tid_op
-            label: 'Browse by Province'
-            description: ''
+            label: ''
+            description: 'Browse by Province'
             use_operator: false
             operator: tid_op
             identifier: tid
@@ -406,7 +406,7 @@ display:
           empty: false
           tokenize: false
           content:
-            value: "<p>Introducing the experience, values, lessons, skills and advice of elder Atlantic Canadian women. Each one carries decades of work toward creating change in how society operates.</p>\r\n\r\n<p><a href=\"activists\">Browse all the activists</a> or narrow the list by province:</p>"
+            value: "<br>\r\n<p>Introducing the experience, values, lessons, skills and advice of elder Atlantic Canadian women. Each one carries decades of work toward creating change in how society operates.</p>\r\n\r\n<p><a href=\"activists\">Browse all the activists</a> or narrow the list by province:</p>\r\n<br>"
             format: basic_html
           plugin_id: text
       footer: {  }

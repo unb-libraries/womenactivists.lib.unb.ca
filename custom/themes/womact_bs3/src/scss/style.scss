@@ -150,9 +150,13 @@ div[role="main"] {
   margin-top: 2em !important;
 }
 
-.field.field--name-field-bio table tr td:first-child {
-  width: 80px !important;
-  vertical-align: text-top !important;
+.field.field--name-field-bio table tr {
+  height: 2em;
+
+  td:first-child {
+    width: 100px !important;
+    vertical-align: text-top !important;
+  }
 }
 
 // Book pages

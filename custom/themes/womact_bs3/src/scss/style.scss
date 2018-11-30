@@ -151,11 +151,14 @@ div[role="main"] {
 }
 
 .field.field--name-field-bio table tr {
-  height: 2em;
+  border-top: 10px solid $sand;
 
   td:first-child {
     width: 100px !important;
-    vertical-align: text-top !important;
+  }
+
+  td {
+    vertical-align: top !important;
   }
 }
 

@@ -194,13 +194,15 @@ div[role="main"] {
   font-size: 1.4em;
 }
 
-.view-id-activists .pagination.js-pager__items {
+.view-id-activists .pagination.js-pager__items > li {
   a {
     color: $lavender !important;
   }
 
-  &.active a, &.is-active > a {
+  &.active a, &.is-active a {
+    color: white !important;
     background-color: $lavender !important;
+    border-color: $lavender !important;
   }
 }
 

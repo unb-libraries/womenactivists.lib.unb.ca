@@ -150,6 +150,11 @@ div[role="main"] {
   margin-top: 2em !important;
 }
 
+.field.field--name-field-bio table td {
+  width: 80px !important;
+  vertical-align: text-top !important;
+}
+
 // Book pages
 .content nav > h2 {
   visibility: hidden;

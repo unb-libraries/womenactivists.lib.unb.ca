@@ -31,3 +31,8 @@ Feature: Core
       When I go to "admin/structure/taxonomy/manage/tags/overview"
       Then I should see "Tag one"
       And I should see "Tag two"
+
+    Scenario: Homepage title slideshow
+      When I visit "/"
+      Then I should see "Women Social Activists of Atlantic Canada"
+      And I should see "Profiles of Wisdom"

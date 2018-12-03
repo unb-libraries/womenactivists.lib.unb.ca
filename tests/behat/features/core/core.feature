@@ -33,6 +33,10 @@ Feature: Core
       And I should see "Tag two"
 
     Scenario: Homepage title slideshow
+      Given "activist_profile" content:
+      | title | field_bio |
+      | Joan of Arc | TestWOMACT |
       When I visit "/"
       Then I should see "Women Social Activists of Atlantic Canada"
       And I should see "Profiles of Wisdom"
+      And I should see "TestWOMACT"

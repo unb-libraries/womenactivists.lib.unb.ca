@@ -103,7 +103,7 @@
         "drupal/bootstrap": "3.17",
         "drupal/chosen": "2.1",
         "drupal/config_update": "1.5",
-        "drupal/core": "8.6.13",
+        "drupal/core": "8.6.14",
         "drupal/features": "3.8",
         "drupal/google_analytics": "2.4",
         "drupal/inline_entity_form": "1.0-rc1",

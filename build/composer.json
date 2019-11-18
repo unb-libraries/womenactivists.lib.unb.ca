@@ -106,7 +106,7 @@
         "drupal/core": "8.7.10",
         "drupal/features": "3.8",
         "drupal/google_analytics": "2.4",
-        "drupal/health_check": "1.1",
+        "drupal/health_check": "1.2",
         "drupal/inline_entity_form": "1.0-rc1",
         "drupal/paragraphs": "1.10",
         "drupal/redis": "1.1",

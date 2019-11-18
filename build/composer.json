@@ -109,7 +109,7 @@
         "drupal/health_check": "1.2",
         "drupal/inline_entity_form": "1.0-rc1",
         "drupal/paragraphs": "1.10",
-        "drupal/redis": "1.1",
+        "drupal/redis": "1.2",
         "drupal/search_api": "1.14",
         "drupal/search_api_autocomplete": "1.2",
         "drupal/search_api_solr": "3.4",

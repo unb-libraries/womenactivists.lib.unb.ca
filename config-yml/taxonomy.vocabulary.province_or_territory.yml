@@ -5,5 +5,4 @@ dependencies: {  }
 name: 'Province or Territory'
 vid: province_or_territory
 description: 'Province/territory of origin.'
-hierarchy: 0
 weight: 0

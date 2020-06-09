@@ -105,7 +105,7 @@
         "drupal/config_update": "1.5",
         "drupal/core": "8.9.0",
         "drupal/features": "3.8",
-        "drupal/google_analytics": "2.4",
+        "drupal/google_analytics": "2.5",
         "drupal/health_check": "1.2",
         "drupal/inline_entity_form": "1.0-rc1",
         "drupal/paragraphs": "1.11",

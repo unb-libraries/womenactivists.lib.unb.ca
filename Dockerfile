@@ -1,4 +1,4 @@
-unblibraries/drupal:dockworker-2.x
+FROM unblibraries/drupal:dockworker-2.x
 MAINTAINER UNB Libraries <libsupport@unb.ca>
 
 ENV DRUPAL_SITE_ID womacti

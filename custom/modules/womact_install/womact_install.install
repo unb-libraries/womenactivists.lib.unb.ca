@@ -5,6 +5,8 @@
  * Contains womact_install.install.
  */
 
+use Drupal\taxonomy\Entity\Term;
+
 /**
  * Implements hook_install().
  */

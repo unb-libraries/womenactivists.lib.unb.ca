@@ -24,7 +24,7 @@ function womact_install_install() {
 function addTerms($vocabulary, $terms) {
 
   foreach ($terms as $term) {
-    $new_term = \Drupal\taxonomy\Entity\Term::create([
+    $new_term = Term::create([
       'vid' => $vocabulary,
       'name' => $term,
     ]);

@@ -8,7 +8,7 @@ ENV DRUPAL_SITE_URI womenactivists.lib.unb.ca
 ENV DRUPAL_SITE_UUID 2a45ae15-13ee-480c-8389-177be66b8d67
 
 # Build application.
-COPY ./build /build
+COPY ./build/ /build/
 RUN ${RSYNC_MOVE} /build/scripts/container/ /scripts/ && \
   /scripts/addOsPackages.sh && \
   /scripts/initOpenLdap.sh && \

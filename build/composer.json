@@ -70,9 +70,9 @@
             "package": {
                 "dist": {
                     "type": "file",
-                    "url": "https://briancherne.github.io/jquery-hoverIntent/jquery.hoverIntent.js"
+                    "url": "https://raw.githubusercontent.com/briancherne/jquery-hoverIntent/master/jquery.hoverIntent.js"
                 },
-                "name": "briancherne/jquery.hoverIntent",
+                "name": "briancherne/jquery.hoverintent",
                 "require": {
                     "composer/installers": "^1.6.0"
                 },

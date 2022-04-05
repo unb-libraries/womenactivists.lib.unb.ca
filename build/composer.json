@@ -107,7 +107,7 @@
   "require": {
     "briancherne/jquery.hoverintent": "1.0",
     "cdnjs/json2": "1.0",
-    "drupal/bootstrap": "3.23",
+    "drupal/bootstrap": "3.24",
     "drupal/config_update": "1.7",
     "drupal/core": "9.3.9",
     "drupal/google_analytics": "2.5",

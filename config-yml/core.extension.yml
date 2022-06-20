@@ -24,10 +24,14 @@ module:
   history: 0
   image: 0
   link: 0
+  menu_link_content: 1
   menu_ui: 0
+  minimal: 1000
+  mysql: 0
   node: 0
   options: 0
   page_cache: 0
+  paragraphs: 11
   path: 0
   path_alias: 0
   quickedit: 0
@@ -40,16 +44,13 @@ module:
   toolbar: 0
   update: 0
   user: 0
+  views: 10
   views_slideshow: 0
   views_slideshow_cycle: 0
   views_ui: 0
   womact_install: 0
   womact_menu: 0
   womact_static: 0
-  menu_link_content: 1
-  views: 10
-  paragraphs: 11
-  minimal: 1000
 theme:
   stable: 0
   classy: 0

@@ -15,6 +15,6 @@ plugin: womact_footer
 settings:
   id: womact_footer
   label: 'WOMACT Footer'
-  provider: womact_static
   label_display: '0'
+  provider: womact_static
 visibility: {  }

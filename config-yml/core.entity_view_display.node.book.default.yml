@@ -17,22 +17,22 @@ bundle: book
 mode: default
 content:
   body:
-    label: visually_hidden
     type: text_default
+    label: visually_hidden
+    settings: {  }
+    third_party_settings: {  }
     weight: 0
     region: content
-    settings: {  }
-    third_party_settings: {  }
   field_book_quot:
-    weight: 1
+    type: basic_string
     label: visually_hidden
     settings: {  }
     third_party_settings: {  }
-    type: basic_string
+    weight: 1
     region: content
   links:
-    weight: 2
-    region: content
     settings: {  }
     third_party_settings: {  }
+    weight: 2
+    region: content
 hidden: {  }

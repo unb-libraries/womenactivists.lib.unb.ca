@@ -1,0 +1,10 @@
+uuid: 931a7280-22a1-4cc6-a4db-d00437c283c6
+langcode: en
+status: true
+dependencies: {  }
+id: views_sitemap
+label: 'Views Sitemap'
+description: ''
+sitemap_generator: default
+url_generators:
+  views: views

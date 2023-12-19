@@ -5,5 +5,6 @@ dependencies: {  }
 id: captioned_picture
 label: 'Captioned Picture'
 icon_uuid: null
+icon_default: null
 description: 'Contains an image field and a text field for captioning. '
 behavior_plugins: {  }

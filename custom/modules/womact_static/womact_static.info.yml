@@ -2,5 +2,5 @@ name: WOMACT Static Pages/Blocks
 type: module
 description: Static pages and blocks for womenactivists.lib.unb.ca
 core: 8.x
-core_version_requirement: ^8 || ^9
+core_version_requirement: ^9 || ^10
 package: WOMACT Custom

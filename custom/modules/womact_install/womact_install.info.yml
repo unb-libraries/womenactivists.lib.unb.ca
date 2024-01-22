@@ -2,7 +2,7 @@ name: WOMACT Install
 type: module
 description: Install/update directves for womenactivists.lib.unb.ca
 core: 8.x
-core_version_requirement: ^8 || ^9
+core_version_requirement: ^9 || ^10
 package: WOMACT Custom
 
 dependencies:

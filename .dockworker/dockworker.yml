@@ -1,28 +1,72 @@
 dockworker:
-  version: '5'
+  version: '6'
   application:
-    name: womenactivists.lib.unb.ca
-    finish_marker: '99_zz_notify_user_URI'
-    project_prefix: WOMACT
-    upstream_images:
-      - ghcr.io/unb-libraries/drupal:9.x-2.x-unblib
-    uuid: 3085
-  deployment:
-    environments:
+    name: Women Social Activists of Atlantic Canada
+    uri: https://womenactivists.lib.unb.ca
+    description: >
+      This project honours the work of Atlantic Canadian elder women activists in various societal 
+      arenas (including but not limited to women's issues) and captures the wisdom in their 
+      experiential learning.
+    topics:
+      - women
+      - activism
+      - history
+      - research
+    identifiers:
+      id: womenactivists.lib.unb.ca
+      slug: womenactivists-lib-unb-ca
+      short_slug: womenactivists
+      uuid: 3085
+    framework:
+      name: Drupal
+      version: 10
+      startup_finished_marker: '99_startup_sequence_complete'
+      endpoint:
+        name: http
+        port: 80
+        readiness_timeout: 15
+    license:
+      license: MIT
+      holder: University of New Brunswick Libraries
+    shell:
+      path: /bin/sh
+  endpoints:
+    env:
       - dev
       - prod
-    workflow:
-      source: dockworker-drupal
-      type: deployment-workflow
-  drupal:
-    major: 9
-  github:
-    repo: womenactivists.lib.unb.ca
-    owner: unb-libraries
-  image:
-    push_branches:
-      - dev
-      - prod
-    name: ghcr.io/unb-libraries/womenactivists.lib.unb.ca
-    date_tag_image: true
-    repository: ghcr
+    deployments:
+      womenactivists-lib-unb-ca:
+        default: true
+        managed: true
+        name: womenactivists-lib-unb-ca
+      drupal-mysql-lib-unb-ca:
+        managed: false
+        name: mysql
+      drupal-redis-lib-unb-ca:
+        managed: false
+        name: redis
+      drupal-solr-lib-unb-ca:
+        managed: false
+        name: solr
+  workflows:
+    vcs:
+      type: github
+      owner: unb-libraries
+      name: womenactivists.lib.unb.ca
+    jira:
+      project_keys:
+        - WOMACT
+    image:
+      name: ghcr.io/unb-libraries/womenactivists.lib.unb.ca
+      parent: ghcr.io/unb-libraries/drupal:10.x-1.x-unblib
+      repository: GitHub
+      push-branches:
+        - dev
+        - prod
+    e2e_tests:
+        - id: core
+          frequency: '*/5 * * * *'
+          source_files:
+            - .dockworker/tests/e2e/womenactivists.lib.unb.ca.yml
+          namespaces:
+            - prod

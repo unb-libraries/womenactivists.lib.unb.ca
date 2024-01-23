@@ -123,6 +123,7 @@
   "require": {
     "cdnjs/json2": "^1",
     "drupal/bootstrap": "^3",
+    "drupal/bootstrap5": "^3",
     "drupal/ckeditor": "^1",
     "drupal/color": "^1",
     "drupal/config_update": "^2",

@@ -61,5 +61,6 @@ theme:
   olivero: 0
   claro: 0
   bootstrap: 0
+  bootstrap5: 0
   womact_bs3: 0
 profile: minimal

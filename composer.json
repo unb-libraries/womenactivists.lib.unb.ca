@@ -13,7 +13,19 @@
   "minimum-stability": "dev",
   "name": "unb-libraries/womenactivists.lib.unb.ca",
   "prefer-stable": true,
+  "replace": {
+    "drupal/core": "*"
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://packages.drupal.org/8"
+    }
+  ],
   "require-dev": {
+    "drupal/bootstrap5": "^3",
+    "drupal/bootstrap4": "2.1.14",
+    "twbs/bootstrap": "~4.5.3",
     "unb-libraries/dockworker-drupal": "^6"
   },
   "scripts": {

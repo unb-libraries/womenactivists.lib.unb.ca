@@ -1,0 +1,20 @@
+uuid: a11a6883-f5f0-4b0a-bf2a-1a509212986b
+langcode: en
+status: true
+dependencies:
+  theme:
+    - womenactivists_lib_unb_ca
+_core:
+  default_config_hash: Au70CjefT5sBwENL3tolbjF53KSzCXgP_Or67jW_lHE
+id: womenactivists_lib_unb_ca_local_actions
+theme: womenactivists_lib_unb_ca
+region: content
+weight: -2
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

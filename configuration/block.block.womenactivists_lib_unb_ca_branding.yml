@@ -1,0 +1,25 @@
+uuid: e1a1f514-7d0b-4c46-850c-08bdea32b44a
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - womenactivists_lib_unb_ca
+_core:
+  default_config_hash: YyCjJrRgy7RgzSwC4BxbHeU4-PfMvi5gx-hCZiwQAUo
+id: womenactivists_lib_unb_ca_branding
+theme: womenactivists_lib_unb_ca
+region: nav_branding
+weight: -6
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: false
+visibility: {  }

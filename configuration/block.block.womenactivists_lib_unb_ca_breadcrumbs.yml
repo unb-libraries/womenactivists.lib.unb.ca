@@ -1,0 +1,22 @@
+uuid: 75a6419b-ab5e-4e37-bb4b-a5db1433d7d9
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - womenactivists_lib_unb_ca
+_core:
+  default_config_hash: 6pjg_G5z-r1MWvyz05rCKq9nHk-T4Zajwk1s1W3Bm10
+id: womenactivists_lib_unb_ca_breadcrumbs
+theme: womenactivists_lib_unb_ca
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility: {  }

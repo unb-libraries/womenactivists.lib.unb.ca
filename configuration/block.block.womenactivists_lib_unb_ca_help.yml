@@ -1,0 +1,22 @@
+uuid: a1abe537-3078-4dcc-985e-81d2999b60d6
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - womenactivists_lib_unb_ca
+_core:
+  default_config_hash: xfse_UAbWJkBJ_QaUkfrmuyvQkcv1XuUs7xdI73L-0g
+id: womenactivists_lib_unb_ca_help
+theme: womenactivists_lib_unb_ca
+region: content
+weight: -3
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }

@@ -1,0 +1,20 @@
+uuid: 79b93bc4-282c-4a2a-ad22-bcf47d163e86
+langcode: en
+status: true
+dependencies:
+  theme:
+    - womenactivists_lib_unb_ca
+_core:
+  default_config_hash: xqLGxg9ZM6TYwHlG09CUrx9cURPzdKdIcJdR4EVpOfg
+id: womenactivists_lib_unb_ca_page_title
+theme: womenactivists_lib_unb_ca
+region: content
+weight: -6
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility: {  }

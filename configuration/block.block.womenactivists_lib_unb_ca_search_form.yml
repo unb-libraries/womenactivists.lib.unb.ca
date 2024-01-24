@@ -1,0 +1,23 @@
+uuid: 686cc370-0e76-405f-8c6c-811fa904ad24
+langcode: en
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - womenactivists_lib_unb_ca
+_core:
+  default_config_hash: UAmela0WSstwZJDzdDl18vv9yoGF8XZG7MNIJtRT9I0
+id: womenactivists_lib_unb_ca_search_form
+theme: womenactivists_lib_unb_ca
+region: nav_additional
+weight: 0
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: 'Search form'
+  label_display: '0'
+  provider: search
+  page_id: ''
+visibility: {  }

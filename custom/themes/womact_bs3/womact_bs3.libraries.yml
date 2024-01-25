@@ -1,5 +1,0 @@
-global-styling:
-  version: 1.0.0
-  css:
-    base:
-      dist/css/style.css: {}

@@ -15,8 +15,18 @@
 html {
   body {
     background-color: purple !important;
+    main {
+      > .container {
+        .region-content {
+          #block-womenactivists-lib-unb-ca-content {
+            .view-content {
+              columns: 2;
+            }
+          }
+        }
+      }
+    }
   }
   footer {
-    background-color: purple !important;
   }
 }

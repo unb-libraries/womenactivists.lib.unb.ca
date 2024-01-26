@@ -14,9 +14,24 @@
 // Global background.
 html {
   body {
-    background-color: purple !important;
+    header {
+      nav.navbar {
+        .container {
+          .region-nav-branding {
+            #block-womenactivists-lib-unb-ca-branding {
+              .navbar-brand {
+                .site-title {
+                  font-size: 2rem;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
     main {
       > .container {
+        background-color: $sand !important;
         .region-content {
           #block-womenactivists-lib-unb-ca-content {
             .view-content {

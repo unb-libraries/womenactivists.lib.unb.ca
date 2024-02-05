@@ -300,7 +300,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"container\" id=\"slide\">\r\n<div class=\"row\">\r\n<div class=\"col-sm-7\" id=\"slide-text\">\r\n<div class=\"row\" id=\"slide-name\">{{ title }}</div>\r\n<div class=\"row\" id=\"slide-bio\">{{ field_bio|slice(0, 300)|striptags }}...\r\n<a href=\"/node/{{ nid }}\">Read more</a>\r\n</div>\r\n</div>\r\n<div class=\"col-sm-5\" id=\"slide-portrait\">\r\n{{ field_portrait }}\r\n</div>\r\n</div>\r\n</div>"
+            text: "<div class=\"container slide\">\r\n<div class=\"row\">\r\n<div class=\"col-sm-7 slide-text\">\r\n<div class=\"row slide-name\">{{ title }}</div>\r\n<div class=\"row slide-bio\">{{ field_bio|slice(0, 300)|striptags }}...\r\n<a href=\"/node/{{ nid }}\">Read more</a>\r\n</div>\r\n</div>\r\n<div class=\"col-sm-5 slide-portrait\">\r\n{{ field_portrait }}\r\n</div>\r\n</div>\r\n</div>"
             make_link: false
             path: ''
             absolute: false

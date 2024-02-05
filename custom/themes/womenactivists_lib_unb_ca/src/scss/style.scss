@@ -34,9 +34,26 @@ html {
         padding: 0 !important;
         background-color: $sand !important;
         .region-content {
+          color: $gray-700;
+          a:active,
+          a:focus,
+          a:focus-within,
+          a:target,
+          a:hover {
+            color: $secondary !important;
+          }
+          padding: 0;
           #block-womenactivists-lib-unb-ca-content {
             .view-content {
               columns: 2;
+              .col-sm-5,
+              .col-sm-7 {
+                padding: 0 !important;
+              }
+              .slide-name,
+              .slide-bio {
+                padding-left: 1rem !important;
+              }
             }
           }
         }

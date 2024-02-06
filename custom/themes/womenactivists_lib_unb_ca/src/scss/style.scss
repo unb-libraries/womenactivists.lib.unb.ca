@@ -16,12 +16,21 @@ html {
   body {
     header {
       nav.navbar {
+        padding: 0;
+        background-color: $secondary !important;
         .container {
+          padding: 1rem;
+          background-color: $primary;
           .region-nav-branding {
             #block-womenactivists-lib-unb-ca-branding {
               .navbar-brand {
-                .site-title {
-                  font-size: 2rem;
+                margin: 0;
+                padding: 0;
+                > div {
+                  line-height: 2rem;
+                  .site-title {
+                    font-size: 2rem;
+                  }
                 }
               }
             }
@@ -32,7 +41,7 @@ html {
     main {
       > .container {
         padding: 0 !important;
-        background-color: $sand !important;
+        background-color: $light !important;
         .region-content {
           color: $gray-700;
           a:active,
@@ -44,15 +53,39 @@ html {
           }
           padding: 0;
           #block-womenactivists-lib-unb-ca-content {
-            .view-content {
-              columns: 2;
-              .col-sm-5,
-              .col-sm-7 {
-                padding: 0 !important;
+            .view-slideshow {
+              .view-header {
+                width: 75%;
+                height: 2rem;
+                margin-left: 25%;
+                padding-left: 2rem;
+                vertical-align: middle;
+                border-bottom-left-radius: 2rem;
+                background: $primary !important;
+                color: $light;
               }
-              .slide-name,
-              .slide-bio {
-                padding-left: 1rem !important;
+              .view-content {
+                columns: 2;
+                .col-sm-5 {
+                  padding: 0 !important;
+                }
+                .col-sm-7 {
+                  .slide-name {
+                    font-size: 1.4rem;
+                  }
+                }
+                .slide-name {
+                  padding: 2rem 1rem 0;  
+                }
+                .slide-bio {
+                  padding: .5rem 1rem;
+                  > a {
+                    padding-top: .5rem;
+                  }
+                }
+                .slide-name > a {
+                  padding: 0;
+                }
               }
             }
           }
@@ -61,5 +94,10 @@ html {
     }
   }
   footer {
+    padding: 0;
+    .container {
+      padding: 0;
+      background-color: $primary !important;
+    }
   }
 }

@@ -1,0 +1,20 @@
+uuid: 9285732e-5da8-4c14-b51f-c97593b031da
+langcode: en
+status: true
+dependencies:
+  module:
+    - womact_static
+  theme:
+    - womenactivists_lib_unb_ca
+id: womenactivists_lib_unb_ca_womactfooter
+theme: womenactivists_lib_unb_ca
+region: footer
+weight: 0
+provider: null
+plugin: womact_footer
+settings:
+  id: womact_footer
+  label: 'WOMACT Footer'
+  label_display: '0'
+  provider: womact_static
+visibility: {  }

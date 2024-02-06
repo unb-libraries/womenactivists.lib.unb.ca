@@ -98,6 +98,13 @@ html {
     .container {
       padding: 0;
       background-color: $primary !important;
+      #block-womenactivists-lib-unb-ca-womactfooter {
+        margin: 1rem;
+        #womact-footer {
+          margin-top: 1rem;
+          text-align: center;
+        }
+      }
     }
   }
 }

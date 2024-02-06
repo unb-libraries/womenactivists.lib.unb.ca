@@ -19,11 +19,12 @@ class WomactFooter extends BlockBase {
    * {@inheritdoc}
    */
   public function build() {
-    $text = '<p id="womact-footer">© 2018<br>This work is licensed under a Creative Commons
+    $year = date('Y');
+    $text = "<p id='womact-footer'>© $year<br>This work is licensed under a Creative Commons
     Attribution-NonCommercial 2.5 Canada License.<br>Maintained by
-    <a href="https://lib.unb.ca">UNB Libraries</a>, <a href="https://unb.ca">University
+    <a href='https://lib.unb.ca'>UNB Libraries</a>, <a href='https://unb.ca'>University
     of New Brunswick</a>.<br>For inquiries about licensing rights please contact
-    us.</p>';
+    us.</p>";
 
     return [
       '#markup' => $this->t($text),

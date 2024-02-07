@@ -1,0 +1,7 @@
+cacheexclude_list: /slideshow
+cacheexclude_node_types:
+  activist_profile: '0'
+  article: '0'
+  book: '0'
+  commentary: '0'
+  page: '0'

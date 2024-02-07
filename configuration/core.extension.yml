@@ -5,6 +5,7 @@ module:
   block_content: 0
   book: 0
   breakpoint: 0
+  cacheexclude: 0
   ckeditor: 0
   ckeditor5: 0
   color: 0
@@ -14,6 +15,7 @@ module:
   contextual: 0
   datetime: 0
   dblog: 0
+  devel_generate: 0
   dynamic_page_cache: 0
   editor: 0
   entity_reference_revisions: 0

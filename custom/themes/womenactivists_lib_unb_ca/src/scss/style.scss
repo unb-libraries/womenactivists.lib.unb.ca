@@ -9,19 +9,39 @@
 @import '../../../../../vendor/drupal/bootstrap5/scss/style';
 
 /* Subtheme styles */
-
-// Global (careful here).
-// Global background.
 html {
   body {
+    a {
+      text-decoration: none;
+    }
+    a:active,
+    a:focus,
+    a:focus-within,
+    a:target,
+    a:hover {
+      text-decoration: underline !important;
+      color: $secondary !important;
+    }
     header {
       nav.navbar {
         padding: 0;
         background-color: $secondary !important;
         .container {
-          max-width: 1319px;
           padding: 1rem;
           background-color: $primary;
+          .region-nav-main {
+            .nav-item {
+              padding-left: 1rem;
+              .nav-link {
+                padding: .2rem 0;
+                text-decoration: none !important;
+                color: $light;
+                &.is-active {
+                  border-bottom: 1px $light solid;
+                }
+              }
+            }
+          }
           .region-nav-branding {
             #block-womenactivists-lib-unb-ca-branding {
               .navbar-brand {
@@ -30,7 +50,9 @@ html {
                 > div {
                   line-height: 1.8rem;
                   .site-title {
+                    text-decoration: none !important;
                     font-size: 1.8rem;
+                    color: $light !important;
                   }
                 }
               }
@@ -41,18 +63,10 @@ html {
     }
     main {
       > .container {
-        max-width: 1319px;
         padding: 0 !important;
         background-color: $light !important;
         .region-content {
           color: $gray-700;
-          a:active,
-          a:focus,
-          a:focus-within,
-          a:target,
-          a:hover {
-            color: $secondary !important;
-          }
           padding: 0;
           #block-womenactivists-lib-unb-ca-content {
             .view-slideshow {
@@ -101,7 +115,6 @@ html {
     }
     padding: 0;
     .container {
-      max-width: 1319px;
       padding: 0;
       background-color: $primary !important;
       #block-womenactivists-lib-unb-ca-womactfooter {

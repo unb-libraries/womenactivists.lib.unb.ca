@@ -19,6 +19,7 @@ html {
         padding: 0;
         background-color: $secondary !important;
         .container {
+          max-width: 1319px;
           padding: 1rem;
           background-color: $primary;
           .region-nav-branding {
@@ -27,9 +28,9 @@ html {
                 margin: 0;
                 padding: 0;
                 > div {
-                  line-height: 2rem;
+                  line-height: 1.8rem;
                   .site-title {
-                    font-size: 2rem;
+                    font-size: 1.8rem;
                   }
                 }
               }
@@ -40,6 +41,7 @@ html {
     }
     main {
       > .container {
+        max-width: 1319px;
         padding: 0 !important;
         background-color: $light !important;
         .region-content {
@@ -94,8 +96,12 @@ html {
     }
   }
   footer {
+    &.mt-auto {
+      margin-top: 0 !important;
+    }
     padding: 0;
     .container {
+      max-width: 1319px;
       padding: 0;
       background-color: $primary !important;
       #block-womenactivists-lib-unb-ca-womactfooter {

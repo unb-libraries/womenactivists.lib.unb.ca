@@ -123,6 +123,14 @@ html {
             }
           }
           #block-womenactivists-lib-unb-ca-content {
+            #book-nav {
+              .text-right {
+                text-align: end;
+              } 
+            }
+            .node__links {
+              margin-bottom: 1rem;
+            }
             .activist-profile {
               img {
                 margin: 1rem 0 1rem 0;
@@ -143,11 +151,6 @@ html {
               }
               .field--name-field-links {
                 margin: 2rem 0;
-              }
-              #book-nav {
-                .text-right {
-                  text-align: end;
-                } 
               }
             }
           }

@@ -7,6 +7,7 @@ $light: $sand !default;
 // white: #fff !default;
 // $black: #000 !default;
 $gray-700: #495057 !default;
+$gray-350: lighten($gray-700, 50%);
 // $blue: #003CC5 !default;
 // $cyan: #006170 !default;
 // $pink: #e21181 !default;

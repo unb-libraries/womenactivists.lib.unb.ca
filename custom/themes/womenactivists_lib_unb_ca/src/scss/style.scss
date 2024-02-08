@@ -10,75 +10,23 @@
 
 /* Subtheme styles */
 html {
-  body {
-    a {
-      text-decoration: none;
-    }
-    a:active,
-    a:focus,
-    a:focus-within,
-    a:target,
-    a:hover {
-      text-decoration: underline !important;
-      color: $secondary !important;
-    }
-    header {
-      nav.navbar {
-        padding: 0;
-        background-color: $secondary !important;
-        .container {
-          padding: 1rem;
-          background-color: $primary;
-          .region-nav-main {
-            .nav-item {
-              padding-left: 1rem;
-              .nav-link {
-                padding: .2rem 0;
-                text-decoration: none !important;
-                color: $light;
-                &.is-active {
-                  border-bottom: 1px $light solid;
-                }
-              }
-            }
-          }
-          .region-nav-branding {
-            #block-womenactivists-lib-unb-ca-branding {
-              .navbar-brand {
-                margin: 0;
-                padding: 0;
-                > div {
-                  line-height: 1.8rem;
-                  .site-title {
-                    text-decoration: none !important;
-                    font-size: 1.8rem;
-                    color: $light !important;
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    }
+  body.path-frontpage {
     main {
       > .container {
         padding: 0 !important;
-        background-color: $light !important;
         .region-content {
-          color: $gray-700;
-          padding: 0;
           #block-womenactivists-lib-unb-ca-content {
             .view-slideshow {
               .view-header {
                 width: 75%;
-                height: 2rem;
+                height: 2.8rem;
                 margin-left: 25%;
                 padding-left: 2rem;
                 vertical-align: middle;
-                border-bottom-left-radius: 2rem;
+                border-bottom-left-radius: 2.8rem;
                 background: $primary !important;
                 color: $light;
+                font-size: 1.4rem;
               }
               .view-content {
                 columns: 2;
@@ -103,6 +51,99 @@ html {
                   padding: 0;
                 }
               }
+            }
+          }
+        }
+      }
+    }
+  }
+  body {
+    a {
+      text-decoration: none;
+    }
+    a:active,
+    a:focus,
+    a:focus-within,
+    a:target,
+    a:hover {
+      text-decoration: underline !important;
+      color: $secondary !important;
+    }
+    header {
+      nav.navbar {
+        padding: 0;
+        background-color: $secondary !important;
+        .container {
+          padding: 2rem 1rem 2rem 2rem;
+          background-color: $primary;
+          .region-nav-main {
+            .nav-item {
+              padding-left: 1rem;
+              .nav-link {
+                padding: .2rem 0;
+                text-decoration: none !important;
+                color: $light;
+                &.is-active {
+                  border-bottom: 1px $light solid;
+                }
+              }
+            }
+          }
+          .region-nav-branding {
+            #block-womenactivists-lib-unb-ca-branding {
+              .navbar-brand {
+                margin: 0;
+                padding: 0;
+                > div {
+                  line-height: 1.8rem;
+                  .site-title {
+                    margin: 1rem;
+                    text-decoration: none !important;
+                    font-size: 1.8rem;
+                    color: $light !important;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    main {
+      > .container {
+        padding: 1rem !important;
+        background-color: $light !important;
+        .region-content {
+          color: $gray-700;
+          padding: 0;
+          #block-womenactivists-lib-unb-ca-page-title {
+            h1 {
+              margin-bottom: 2rem;
+              font-size: 1.6rem;
+            }
+          }
+          #block-womenactivists-lib-unb-ca-content {
+            .activist-profile {
+              img {
+                margin: 1rem 0 1rem 0;
+              }
+              blockquote {
+                padding: 1rem 2rem;
+                margin: 1rem 0 2rem;
+                font-size: 1.4rem;
+                border-left: 4px solid $gray-350;
+              }
+              .paragraph--type--captioned-picture {
+                img {
+                  margin-bottom: 0;
+                }
+                .field--name-field-caption {
+                  margin-bottom: 1rem;
+                }
+              }
+              .field--name-field-links {
+                margin: 2rem 0;
+              } 
             }
           }
         }

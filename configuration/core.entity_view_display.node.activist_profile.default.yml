@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.activist_profile.field_portrait
     - field.field.node.activist_profile.field_prov
     - field.field.node.activist_profile.field_quot
+    - image.style.slide_portrait
     - node.type.activist_profile
   module:
     - entity_reference_revisions
@@ -62,7 +63,7 @@ content:
     label: visually_hidden
     settings:
       image_link: ''
-      image_style: ''
+      image_style: slide_portrait
       image_loading:
         attribute: lazy
     third_party_settings: {  }

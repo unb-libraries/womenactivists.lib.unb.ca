@@ -111,7 +111,7 @@ html {
     }
     main {
       > .container {
-        padding: 1rem !important;
+        padding: 2rem !important;
         background-color: $light !important;
         .region-content {
           color: $gray-700;
@@ -143,7 +143,12 @@ html {
               }
               .field--name-field-links {
                 margin: 2rem 0;
-              } 
+              }
+              #book-nav {
+                .text-right {
+                  text-align: end;
+                } 
+              }
             }
           }
         }

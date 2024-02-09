@@ -123,6 +123,36 @@ html {
             }
           }
           #block-womenactivists-lib-unb-ca-content {
+            blockquote,
+            .field--name-field-book-quot .field__item {
+              padding: 1rem 2rem;
+              margin: 1rem 0 2rem;
+              font-size: 1.4rem;
+              border-left: 4px solid $gray-350;
+            }
+            h2 {
+              font-size: 1.4rem;
+            }
+            img {
+              margin: 1rem 0 1rem 0;
+            }
+            .views-exposed-form {
+              #edit-tid--description {
+                margin-left: .4rem;
+              }
+              #edit-actions {
+                display: inline-block;
+                .form-submit {
+                  color: $light !important;
+                }
+              }
+            }
+            .view-content {
+              .views-row {
+                padding: 1rem;
+                border-top: 1px solid $gray-350;
+              }
+            }
             #book-nav {
               .text-right {
                 text-align: end;
@@ -132,15 +162,6 @@ html {
               margin-bottom: 1rem;
             }
             .activist-profile {
-              img {
-                margin: 1rem 0 1rem 0;
-              }
-              blockquote {
-                padding: 1rem 2rem;
-                margin: 1rem 0 2rem;
-                font-size: 1.4rem;
-                border-left: 4px solid $gray-350;
-              }
               .paragraph--type--captioned-picture {
                 img {
                   margin-bottom: 0;

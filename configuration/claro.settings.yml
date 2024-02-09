@@ -1,0 +1,11 @@
+favicon:
+  mimetype: image/vnd.microsoft.icon
+  path: themes/custom/womenactivists_lib_unb_ca/dist/img/favicon.ico
+  use_default: false
+features:
+  comment_user_picture: true
+  comment_user_verification: true
+  favicon: true
+  node_user_picture: true
+logo:
+  use_default: true

@@ -30,6 +30,13 @@ html {
               }
               .view-content {
                 columns: 2;
+                img {
+                  margin: 0;
+                }
+                .views-row {
+                  padding: 0;
+                  border-top: none;
+                }
                 .col-sm-5 {
                   padding: 0 !important;
                 }

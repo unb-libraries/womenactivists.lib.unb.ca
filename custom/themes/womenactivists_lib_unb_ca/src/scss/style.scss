@@ -205,12 +205,14 @@ html {
   }
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 1399px) {
   body.path-frontpage {
     .view-content {
       columns: 1 !important;
     }
   }
+}
+@media screen and (max-width: 1199px) {
   header .navbar .container.d-flex {
     flex-wrap: wrap;
     .navbar-collapse {

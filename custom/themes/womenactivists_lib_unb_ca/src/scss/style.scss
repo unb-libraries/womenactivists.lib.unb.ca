@@ -156,7 +156,7 @@ html {
             }
             .view-content {
               .views-row {
-                padding: 1rem;
+                padding: 1rem 0;
                 border-top: 1px solid $gray-350;
               }
             }
@@ -202,5 +202,48 @@ html {
         }
       }
     }
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  body.path-frontpage {
+    .view-content {
+      columns: 1 !important;
+    }
+  }
+  header .navbar .container.d-flex {
+    flex-wrap: wrap;
+    .navbar-collapse {
+      justify-content: flex-start !important;
+      margin-top: 1rem;
+    }
+  } 
+}
+@media screen and (max-width: 991px) {
+  .region-nav-branding {
+    margin-bottom: 1rem;
+    max-width: 100%;
+    width: 100%;
+    .site-title {
+      margin: 0 !important;
+    }
+  }
+}
+@media screen and (max-width: 991px) {
+  body.path-frontpage {
+    .view-content {
+      .views-row {
+        margin: 1rem 0;
+        padding: 1rem 0 !important;
+        .slide-name {
+          padding-top: 0 !important;
+        }
+      }
+    }
+  }
+  nav > .container,
+  main > .container,
+  footer > .container {
+    max-width: 100%;
   }
 }

@@ -16,10 +16,15 @@ class RouteSubscriber extends RouteSubscriberBase {
   public function alterRoutes(RouteCollection $collection) {
     // Restrict user admin routes.
     $deny_routes = [
-      'user.pass',
-      'user.register',
-      'user.reset',
       'entity.user.edit_form',
+      'user.edit',
+      'user.login',
+      'user.page',
+      'user.pass',
+      'user.pass.http',
+      'user.register',
+      'user.reset.form',
+      'user.reset',
     ];
 
     // Deny access to non-admins.

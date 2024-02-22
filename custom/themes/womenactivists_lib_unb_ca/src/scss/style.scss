@@ -37,10 +37,15 @@ html {
                   padding: 0;
                   border-top: none;
                 }
-                .col-sm-5 {
+                .slide-portrait {
+                  display: table-cell;
                   padding: 0 !important;
+                  > a {
+                    display: table-cell;
+                  }
                 }
-                .col-sm-7 {
+                .slide-text {
+                  display: table;
                   .slide-name {
                     font-size: 1.4rem;
                   }

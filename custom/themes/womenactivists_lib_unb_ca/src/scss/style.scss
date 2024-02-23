@@ -149,11 +149,12 @@ html {
               margin: 1rem 0 1rem 0;
             }
             .views-exposed-form {
-              #edit-tid--description {
-                margin-left: .4rem;
+              label {
+                font-weight: 400;
               }
               #edit-actions {
                 display: inline-block;
+                margin-top: 2.5rem;
                 .form-submit {
                   color: $light !important;
                 }

@@ -17,16 +17,31 @@ html {
         .region-content {
           #block-womenactivists-lib-unb-ca-content {
             .view-slideshow {
-              .view-header {
+              .view-header, 
+              .view-footer {
                 width: 75%;
                 height: 2.8rem;
                 margin-left: 25%;
-                padding-left: 2rem;
+                padding-top: .3rem;
+                padding-left: 3rem;
+                padding-right: 3rem;
                 vertical-align: middle;
-                border-bottom-left-radius: 2.8rem;
                 background: $primary !important;
                 color: $light;
-                font-size: 1.4rem;
+                font-size: 1.2rem;
+              }
+              .view-header {
+                border-bottom-left-radius: 2.8rem;
+              }
+              .view-footer {
+                border-top-left-radius: 2.8rem;
+                text-align: end;
+                a {
+                  font-size: 1.2rem !important;
+                  font-weight: bold;
+                  text-decoration: underline !important;
+                  color: $light;
+                }
               }
               .view-content {
                 columns: 2;

@@ -493,7 +493,7 @@ display:
           admin_label: ''
           plugin_id: text_custom
           empty: false
-          content: '<a href="activists">VIEW ALL ACTIVISTS</a>'
+          content: '<a href="activists">View All Activists</a>'
           tokenize: false
       display_extenders: {  }
     cache_metadata:

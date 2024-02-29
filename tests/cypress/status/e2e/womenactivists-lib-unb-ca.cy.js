@@ -9,7 +9,7 @@ describe('Woman Social Activists of Atlantic Canada', {baseUrl: host, groups: ['
     })
 
     specify('Menu should contain link to "Activists"', () => {
-      cy.get('"block-womenactivists-lib-unb-ca-main-navigation')
+      cy.get('#block-womenactivists-lib-unb-ca-main-navigation')
         .contains(/^Activists$/)
         .its('0.href')
         .should('match', /\/activists$/)

@@ -68,6 +68,8 @@ services:
       - "4085:8025"
     networks:
       - womenactivists.lib.unb.ca
+    profiles:
+      - mailhog
 networks:
   womenactivists.lib.unb.ca:
     name: womenactivists.lib.unb.ca

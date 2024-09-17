@@ -135,7 +135,6 @@
     "drupal/paragraphs": "^1",
     "drupal/quickedit": "^1",
     "drupal/redis": "^1",
-    "drupal/rdf": "^2",
     "drupal/simple_sitemap": "^4",
     "drupal/views_slideshow": "^5",
     "malsup/jquery.cycle": "^1",

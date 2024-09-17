@@ -2,7 +2,7 @@ FROM ghcr.io/unb-libraries/drupal:10.x-1.x-unblib
 MAINTAINER UNB Libraries <libsupport@unb.ca>
 
 # Install additional OS packages.
-ENV ADDITIONAL_OS_PACKAGES postfix php-ldap php81-pecl-redis
+ENV ADDITIONAL_OS_PACKAGES="postfix php-ldap php-xmlreader php-zip php81-pecl-redis"
 ENV DRUPAL_SITE_ID womacti
 ENV DRUPAL_SITE_URI womenactivists.lib.unb.ca
 ENV DRUPAL_SITE_UUID 2a45ae15-13ee-480c-8389-177be66b8d67

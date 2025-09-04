@@ -226,7 +226,7 @@ html {
   }
 }
 
-@media screen and (max-width: 1399px) {
+@media screen and (min-width: 1399px) {
   body.path-frontpage {
     .view-content {
       .row-slideshow.views-row {

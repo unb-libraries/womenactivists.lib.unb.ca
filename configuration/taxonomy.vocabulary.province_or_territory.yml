@@ -6,3 +6,4 @@ name: 'Province or Territory'
 vid: province_or_territory
 description: 'Province/territory of origin.'
 weight: 0
+new_revision: false

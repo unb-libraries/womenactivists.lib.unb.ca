@@ -11,7 +11,7 @@ third_party_settings:
 name: 'Activist Profile'
 type: activist_profile
 description: "Profile of an activist.\r\n"
-help: ''
+help: null
 new_revision: false
 preview_mode: 0
 display_submitted: false

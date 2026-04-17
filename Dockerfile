@@ -1,8 +1,8 @@
-FROM ghcr.io/unb-libraries/drupal:10.x-1.x-unblib
+FROM ghcr.io/unb-libraries/drupal:11.x-1.x-unblib
 MAINTAINER UNB Libraries <libsupport@unb.ca>
 
 # Install additional OS packages.
-ENV ADDITIONAL_OS_PACKAGES="postfix php-ldap php-xmlreader php-zip php81-pecl-redis"
+ENV ADDITIONAL_OS_PACKAGES="postfix php-ldap php-xmlreader php-zip php83-pecl-redis"
 ENV DRUPAL_SITE_ID womacti
 ENV DRUPAL_SITE_URI womenactivists.lib.unb.ca
 ENV DRUPAL_SITE_UUID 2a45ae15-13ee-480c-8389-177be66b8d67
@@ -24,7 +24,7 @@ COPY ./custom/themes ${DRUPAL_ROOT}/themes/custom
 COPY ./custom/modules ${DRUPAL_ROOT}/modules/custom
 
 # Container metadata.
-LABEL ca.unb.lib.generator="drupal9" \
+LABEL ca.unb.lib.generator="drupal11" \
   com.microscaling.docker.dockerfile="/Dockerfile" \
   com.microscaling.license="MIT" \
   org.label-schema.build-date=$BUILD_DATE \

@@ -3,6 +3,7 @@ dockworker:
   drupal:
     schemas:
       ignore_enforcement:
+        - book.settings.*
         - google_analytics.settings.custom.dimension
         - google_analytics.settings.custom.metric
         - google_analytics.settings.premium

@@ -1,5 +1,20 @@
 dockworker:
   version: '6'
+  drupal:
+    schemas:
+      ignore_enforcement:
+        - google_analytics.settings.custom.dimension
+        - google_analytics.settings.custom.metric
+        - google_analytics.settings.premium
+        - system.authorize.*
+        - system.rss.*
+        - system.file.path.temporary
+        - system.performance.stale_file_threshold
+        - update.settings.notification.emails
+        - views.settings.ui.show.advanced_column
+        - views.settings.ui.show.master_display
+        - views.settings.skip_cache
+        - womenactivists_lib_unb_ca.settings.*
   application:
     name: Women Social Activists of Atlantic Canada
     uri: https://womenactivists.lib.unb.ca

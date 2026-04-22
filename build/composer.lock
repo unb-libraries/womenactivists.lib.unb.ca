@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6966e23b2a3831f3ac8777cb7ee8cc93",
+    "content-hash": "9155289707eb213cf81368ae8c07f8f9",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1021,27 +1021,26 @@
         },
         {
             "name": "drupal/book",
-            "version": "2.0.4",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/book.git",
-                "reference": "2.0.4"
+                "reference": "1.0.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/book-2.0.4.zip",
-                "reference": "2.0.4",
-                "shasum": "ee41dc2c59bc95c3a241ed9d0ecd22eacbd3ca46"
+                "url": "https://ftp.drupal.org/files/projects/book-1.0.0.zip",
+                "reference": "1.0.0",
+                "shasum": "8838e4a314e54dff2bc34a0ae4f0a85ac03b6fb8"
             },
             "require": {
-                "drupal/core": "^10.3 || ^11",
-                "ext-pdo": "*"
+                "drupal/core": ">=10.0"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "2.0.4",
-                    "datestamp": "1767195446",
+                    "version": "1.0.0",
+                    "datestamp": "1712238320",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -1054,25 +1053,22 @@
             ],
             "authors": [
                 {
-                    "name": "Peter Wolanin (pwolanin)",
-                    "homepage": "https://www.drupal.org/u/pwolanin",
-                    "role": "Maintainer"
+                    "name": "mdranove",
+                    "homepage": "https://www.drupal.org/user/3695874"
                 },
                 {
-                    "name": "Stephen Mustgrave (smustgrave)",
-                    "homepage": "https://www.drupal.org/u/smustgrave",
-                    "role": "Co-Maintainer"
+                    "name": "pwolanin",
+                    "homepage": "https://www.drupal.org/user/49851"
                 },
                 {
                     "name": "smustgrave",
                     "homepage": "https://www.drupal.org/user/3252890"
                 }
             ],
-            "description": "A book is a set of nodes tied together in a hierarchical structure, with chapters, sections, and subsections.",
-            "homepage": "https://drupal.org/project/book",
+            "description": "Allows users to create and organize related content in an outline.",
+            "homepage": "https://www.drupal.org/project/book",
             "support": {
-                "source": "https://git.drupalcode.org/project/book",
-                "issues": "https://drupal.org/project/issues/book"
+                "source": "https://git.drupalcode.org/project/book"
             }
         },
         {

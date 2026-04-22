@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "006570832d524054d8a8ce98932fa7ee",
+    "content-hash": "6966e23b2a3831f3ac8777cb7ee8cc93",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1021,31 +1021,27 @@
         },
         {
             "name": "drupal/book",
-            "version": "3.0.2",
+            "version": "2.0.4",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/book.git",
-                "reference": "3.0.2"
+                "reference": "2.0.4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/book-3.0.2.zip",
-                "reference": "3.0.2",
-                "shasum": "2143d2a333873ae0d60bd81ae234f925ea806e18"
+                "url": "https://ftp.drupal.org/files/projects/book-2.0.4.zip",
+                "reference": "2.0.4",
+                "shasum": "ee41dc2c59bc95c3a241ed9d0ecd22eacbd3ca46"
             },
             "require": {
-                "drupal/core": "^11.2",
+                "drupal/core": "^10.3 || ^11",
                 "ext-pdo": "*"
-            },
-            "require-dev": {
-                "drupal/pathauto": "^1.14",
-                "drupal/search_api": "^1.40"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "3.0.2",
-                    "datestamp": "1776376350",
+                    "version": "2.0.4",
+                    "datestamp": "1767195446",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -7540,5 +7536,5 @@
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],
-    "plugin-api-version": "2.6.0"
+    "plugin-api-version": "2.3.0"
 }

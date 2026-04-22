@@ -124,7 +124,7 @@
   ],
   "require": {
     "cdnjs/json2": "^1",
-    "drupal/book": "^3",
+    "drupal/book": "^2",
     "drupal/bootstrap5": "^4",
     "drupal/cacheexclude": "^2",
     "drupal/color": "^2",

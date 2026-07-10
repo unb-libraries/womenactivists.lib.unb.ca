@@ -2,9 +2,9 @@ FROM ghcr.io/unb-libraries/drupal:11.x-1.x-unblib
 
 # Install additional OS packages.
 ENV ADDITIONAL_OS_PACKAGES="postfix php${PHP_VERSION}-ldap php${PHP_VERSION}-xmlreader php${PHP_VERSION}-zip php${PHP_VERSION}-pecl-redis"
-ENV DRUPAL_SITE_ID womacti
-ENV DRUPAL_SITE_URI womenactivists.lib.unb.ca
-ENV DRUPAL_SITE_UUID 2a45ae15-13ee-480c-8389-177be66b8d67
+ENV DRUPAL_SITE_ID="womacti"
+ENV DRUPAL_SITE_URI="womenactivists.lib.unb.ca"
+ENV DRUPAL_SITE_UUID="2a45ae15-13ee-480c-8389-177be66b8d67"
 
 # Build application.
 COPY ./build/ /build/

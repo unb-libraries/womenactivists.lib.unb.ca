@@ -27,16 +27,12 @@ ARG BUILD_DATE
 ARG VCS_REF
 ARG VERSION
 LABEL ca.unb.lib.generator="drupal11" \
-  com.microscaling.docker.dockerfile="/Dockerfile" \
-  com.microscaling.license="MIT" \
-  org.label-schema.build-date=$BUILD_DATE \
-  org.label-schema.description="womenactivists.lib.unb.ca honours the work of Atlantic Canadian elder women activists in various societal arenas." \
-  org.label-schema.name="womenactivists.lib.unb.ca" \
-  org.label-schema.schema-version="1.0" \
-  org.label-schema.url="https://womenactivists.lib.unb.ca" \
-  org.label-schema.vcs-ref=$VCS_REF \
-  org.label-schema.vcs-url="https://github.com/unb-libraries/womenactivists.lib.unb.ca" \
-  org.label-schema.vendor="University of New Brunswick Libraries" \
-  org.label-schema.version=$VERSION \
+  org.opencontainers.image.title="womenactivists.lib.unb.ca" \
+  org.opencontainers.image.description="womenactivists.lib.unb.ca honours the work of Atlantic Canadian elder women activists in various societal arenas." \
+  org.opencontainers.image.vendor="University of New Brunswick Libraries" \
   org.opencontainers.image.authors="UNB Libraries <libsupport@unb.ca>" \
-  org.opencontainers.image.source="https://github.com/unb-libraries/womenactivists.lib.unb.ca"
+  org.opencontainers.image.url="https://womenactivists.lib.unb.ca" \
+  org.opencontainers.image.source="https://github.com/unb-libraries/womenactivists.lib.unb.ca" \
+  org.opencontainers.image.version="$VERSION" \
+  org.opencontainers.image.revision="$VCS_REF" \
+  org.opencontainers.image.created="$BUILD_DATE"

@@ -9,9 +9,15 @@ jobs:
   deploy:
     uses: unb-libraries/dockworker/.github/workflows/build-push-deploy-notify.yaml@6.x
     with:
-      branch-env-map: '{"dev":"dev","prod":"prod"}'
+      # prod only. The dev site is now the static Nuxt build from
+      # unb-libraries/womenactivists.nuxt.lib.unb.ca, and its Helm release owns the
+      # womenactivists-lib-unb-ca Deployment in the dev namespace. Since the container
+      # name matches, a dev deploy from here would `kubectl set image` a Drupal image
+      # onto that live Nuxt site and succeed. The prod branch keeps its own copy of this
+      # file and still deploys prod.
+      branch-env-map: '{"prod":"prod"}'
       build-themes: true
-      deploy-branches: '["dev","prod"]'
+      deploy-branches: '["prod"]'
       image-name: 'ghcr.io/unb-libraries/womenactivists.lib.unb.ca'
       k8s-deployment-name: 'womenactivists-lib-unb-ca'
     secrets:

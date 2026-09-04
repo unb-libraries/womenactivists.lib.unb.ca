@@ -52,14 +52,11 @@ RUN pnpm run generate && \
 
 
 # Deployment image
-FROM ghcr.io/unb-libraries/nginx:3.23.x
+FROM ghcr.io/unb-libraries/nuxt-ssg:3.23.x
 
 ARG BUILD_DATE
 ARG VCS_REF
 ARG VERSION
-
-# Replaces the base image's app.conf; see the header of that file for what differs.
-COPY docker/nginx/app.conf ${NGINX_APP_CONF_FILE}
 
 # Into $APP_WEBROOT, not over it: the base image ships .well-known/ there.
 COPY --from=build /nuxt/.output/public/ ${APP_WEBROOT}/

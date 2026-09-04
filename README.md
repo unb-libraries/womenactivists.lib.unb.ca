@@ -89,11 +89,11 @@ also tags `:dev` and deploys to the `dev` namespace as `dev-womenactivists.lib.u
 The `prod` branch still holds the Drupal build and deploys prod on its own workflow.
 
 The `Dockerfile`'s production path runs `pnpm generate` in a throw-away `build` stage and
-serves the result from `ghcr.io/unb-libraries/nginx`, the standard UNB Libraries nginx
-image. `docker/nginx/app.conf` replaces that image's own config — see its header for what
-differs; in short, Nuxt's `try_files` (so a dead link is a real 404, not the home page with
-a 200 status), the `/health` endpoint the Helm chart's probes require, gzip, and an
-immutable long-cache for fingerprinted assets.
+serves the result from
+[`ghcr.io/unb-libraries/nuxt-ssg`](https://github.com/unb-libraries/docker-nuxt-ssg), which
+carries the nginx configuration for a generated Nuxt site: Nuxt's `try_files` (so a dead link
+is a real 404, not the home page with a 200 status), the `/health` endpoint the Helm chart's
+probes require, gzip, and an immutable long-cache for fingerprinted assets.
 
 The build fails if the site is incomplete: `scripts/verify-generate.mjs` derives the
 expected route set from `content/` and asserts every page was prerendered. This matters

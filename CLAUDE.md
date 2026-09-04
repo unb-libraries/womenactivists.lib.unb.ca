@@ -68,20 +68,13 @@ There is no test setup configured in this repo. Linting and commit messages are 
 - **`Dockerfile`**: `base` is pure toolchain (no `COPY`, so it stays cached); `build` copies
   `package.json`/`pnpm-lock.yaml`/`pnpm-workspace.yaml` and installs *before* copying the
   rest, so editing `content/` does not reinstall `node_modules`; the final stage is
-  `ghcr.io/unb-libraries/nginx:3.23.x` with `.output/public` copied into `$APP_WEBROOT`.
-  This mirrors `docs.lib.unb.ca`. Do not go back to plain `nginx:alpine` — the chart's
-  `robotsTxtAppend`/`robotsTxtReplace` values are inert without this base image's
-  `pre-init.d` scripts.
-- **`docker/nginx/app.conf`** replaces `$NGINX_APP_CONF_FILE` from that base image, the way
-  `docker-nginx-php` does. It is deliberately **not** a `$NGINX_CONFD_DIR/server/*.conf`
-  snippet: the base `app.conf` includes snippets *before* its own `location /`, so a snippet
-  redefining `location /` makes nginx fail to start on a duplicate location. Keep every
-  UPPERCASE placeholder literal — `/scripts/pre-init.d/10_configure_nginx.sh` substitutes
-  them at container start. It carries `try_files $uri $uri.html $uri/index.html =404` (the
-  base image's `/index.html` fallback would make every dead link a soft 200), gzip, an
-  immutable asset cache, and — load-bearing — `location = /health`, which the
-  `unblib-daemon-nuxt-ssg` chart's liveness/readiness probes hit. **Without `/health` every
-  pod is killed by the liveness probe.**
+  `ghcr.io/unb-libraries/nuxt-ssg:3.23.x` with `.output/public` copied into `$APP_WEBROOT`.
+- **The nginx config lives in the base image**
+  ([docker-nuxt-ssg](https://github.com/unb-libraries/docker-nuxt-ssg)), not here: Nuxt's
+  `try_files`, gzip, the asset cache, and — load-bearing — `location = /health`, which the
+  `unblib-daemon-nuxt-ssg` chart's probes hit. Do not go back to plain `nginx:alpine`; the
+  chart's `robotsTxtAppend`/`robotsTxtReplace` values are also inert without the
+  `pre-init.d` scripts this image inherits.
 - **`scripts/verify-generate.mjs`** runs in the build stage and fails the build if any page
   implied by `content/` was not prerendered (155 at time of writing). This is the guard for
   the crawl-coverage hazard: `nuxt generate` discovers routes by crawling links, the home

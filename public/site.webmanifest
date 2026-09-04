@@ -1,0 +1,16 @@
+{
+  "name": "Women Social Activists of Atlantic Canada",
+  "short_name": "Women Activists",
+  "description": "Biographical profiles of Atlantic Canadian elder women activists",
+  "icons": [
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#2a0038",
+  "theme_color": "#8a629a",
+  "display": "standalone"
+}

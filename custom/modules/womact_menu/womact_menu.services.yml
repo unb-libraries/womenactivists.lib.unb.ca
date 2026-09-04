@@ -1,5 +1,0 @@
-services:
-  womact_menu.womact_route_subscriber:
-    class: Drupal\womact_menu\Routing\RouteSubscriber
-    tags:
-      - { name: event_subscriber }

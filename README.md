@@ -1,42 +1,120 @@
-![womenactivists.lib.unb.ca screenshot](https://github.com/unb-libraries/womenactivists.lib.unb.ca/raw/prod/.dockworker/screenshot.png "womenactivists.lib.unb.ca screenshot")
-# [womenactivists.lib.unb.ca](https://womenactivists.lib.unb.ca/) : Lean Instance Repository
-[![Build Status](https://github.com/unb-libraries/womenactivists.lib.unb.ca/actions/workflows/deployment-workflow.yaml/badge.svg?branch=prod)](https://github.com/unb-libraries/womenactivists.lib.unb.ca/actions/workflows/deployment-workflow.yaml)
-[![GitHub license](https://img.shields.io/github/license/unb-libraries/womenactivists.lib.unb.ca)](https://github.com/unb-libraries/womenactivists.lib.unb.ca/blob/prod/LICENSE)
-![GitHub repo size](https://img.shields.io/github/repo-size/unb-libraries/womenactivists.lib.unb.ca?label=lean%20repo%20size)
+# womenactivists.lib.unb.ca
 
-This repository contains the assets used to test, build, and deploy the [womenactivists.lib.unb.ca](https://womenactivists.lib.unb.ca) Drupal application. This repository extends the [unb-libraries/docker-drupal](https://github.com/unb-libraries/docker-drupal) base image, which deploys nginx and php-fpm in the service container.
+UNB Libraries' Electronic Text Centre presentation of *Women Social Activists of Atlantic
+Canada* — biographical profiles of Atlantic Canadian elder women activists — a static
+Nuxt 4 site with no backend, API, or database.
 
-## Deploy this Application Yourself!
-Local deployment, development and testing of womenactivists.lib.unb.ca is easy, as we leverage [dockworker](https://github.com/unb-libraries/dockworker), our unified framework of [Robo](https://robo.li/) commands that streamline local development of our application on Linux or OSX.
+## Getting started
 
-### Step 1: Install Dockworker's Dependencies
-In your local development environment, a minimal number of 'one time' dependencies are required to deploy applications with dockworker. Some or all of these may already be installed in your environment; see the list of dependencies and installation instructions [here](https://github.com/unb-libraries/dockworker/blob/4.x/docs/prerequisites.md).
+Copy `.env` values as needed first — `NUXT_PORT` and `NUXT_SITE_URI` drive the dev server's
+host/port, public URL, and Vite HMR websocket (defaults to `localhost:3000` if unset).
 
-### Step 2: Deploy
-With all dependencies installed, you are ready to deploy any of our applications locally and and begin development:
+### Run with Docker
 
-```
-composer install
-vendor/bin/dockworker deploy
+Requires only [Docker](https://www.docker.com) — the container brings its own Node and pnpm.
+
+```bash
+docker compose up
 ```
 
-And that's it! The application will build and deploy in your local environment.
+This bind-mounts `app/`, `content/`, `public/`, `nuxt.config.ts`, `content.config.ts`,
+`package.json`, and `pnpm-lock.yaml` into the container and runs `pnpm dev` inside it,
+exposing `NUXT_PORT` (3085 by default) and its HMR websocket on `NUXT_PORT * 10` (30850).
+Once you have pnpm on the host, `pnpm container:start` is the same command.
 
-If you work with unb-libraries applications often, you may also consider [installing a dockworker alias](https://gist.github.com/JacobSanford/1448fece856be371060d0f16ccb1b194), which avoids referencing vendor/bin for each dockworker command.
+### Run locally
 
-## Other useful commands
-Run ```vendor/bin/dockworker``` to list available dockworker commands for this application.
+Requires [Node.js](https://nodejs.org) `^20.19 || >=22.12` (Vite 7's floor — the Docker
+images use Node 26) and [pnpm](https://pnpm.io) 11.10.0.
 
-## Author / Contributors
-This application was created at [![UNB Libraries](https://github.com/unb-libraries/assets/raw/master/unblibbadge.png "UNB Libraries")](https://lib.unb.ca) by the following humans:
+```bash
+pnpm install
+pnpm dev
+```
 
-<a href="https://github.com/JacobSanford"><img src="https://avatars.githubusercontent.com/u/244894?v=3" title="Jacob Sanford" width="128" height="128"></a>
-<a href="https://github.com/camilocodes"><img src="https://avatars.githubusercontent.com/u/12695787?v=3" title="Camilo V." width="128" height="128"></a>
-<a href="https://github.com/bricas"><img src="https://avatars.githubusercontent.com/u/18400?v=3" title="Brian Cassidy" width="128" height="128"></a>
-<a href="https://github.com/jtmcd75"><img src="https://avatars.githubusercontent.com/u/10372283?v=3" title="Jeremy McDermott" width="128" height="128"></a>
+pnpm is most easily installed through Corepack, which picks up the version pinned by
+`packageManager` in `package.json`:
 
-## License
-- As part of our 'open' ethos, UNB Libraries licenses its applications and workflows to be freely available to all whenever possible.
-- Consequently, the contents of this repository [unb-libraries/womenactivists.lib.unb.ca] are licensed under the [MIT License](http://opensource.org/licenses/mit-license.html). This license explicitly excludes:
-   - Any website content, which remains the exclusive property of its author(s).
-   - The UNB logo and any of the associated suite of visual identity assets, which remains the exclusive property of the University of New Brunswick.
+```bash
+corepack enable pnpm
+```
+
+### Configuration
+
+Settings are defined in `nuxt.config.ts`. `NUXT_PORT` and `NUXT_SITE_URI` are read from
+`.env` for local development; in production they're set directly as container environment
+variables in the `Dockerfile`.
+
+## Development
+
+| Command | Description |
+| --- | --- |
+| `pnpm dev` | Start the dev server |
+| `pnpm build` | Production build (SSR output) |
+| `pnpm generate` | Static site generation — this is what the production Docker image uses |
+| `pnpm preview` | Preview a production build locally |
+| `pnpm migrate` | Re-run the one-off Drupal content migration (resumable, skips already-migrated pages) |
+| `pnpm lint` / `pnpm lint:fix` | ESLint (`@antfu/eslint-config`) over the whole repo |
+
+Husky git hooks enforce code quality on commit: `pre-commit` runs `lint-staged` (ESLint
+`--fix` on staged files), `commit-msg` runs `commitlint` against the team's `JIRA-123
+subject` header format (see `commitlint.config.ts`).
+
+There is no test setup configured in this repo.
+
+### Structure
+
+- `app/pages/` — file-based routes: `index.vue`, `about/index.vue` + `about/[section].vue`,
+  `bibliography.vue`, `activists/index.vue` (directory) + `activists/[slug]/index.vue`
+  (bio) + `activists/[slug]/[section].vue`, `commentaries/index.vue` + `commentaries/[slug].vue`.
+- `app/layouts/default.vue` — the single shell (header/nav, `<slot />`, footer).
+- `app/components/` — `ActivistCard.vue`, `ProvinceFilter.vue`, and `SectionPager.vue` (a
+  single generic prev/next/up pager shared by both the About and Activist section pages).
+- `content/` — `@nuxt/content` v3 collections: `activists`, `activistSections`,
+  `commentaries`, `about`, `aboutSections`, `pages` (bibliography). See `content.config.ts`
+  and `CLAUDE.md` for the full content model — notably, each activist has her **own**
+  ordered list of narrative sections (varying in count and naming), not a shared fixed set.
+- `public/images/` — migrated portraits and supporting pictures.
+- `scripts/migrate-content.mjs` — the one-off script that seeded `content/` and
+  `public/images/` from the live Drupal site (`pnpm migrate`). Kept as provenance
+  documentation, not part of the runtime build.
+
+## Deployment
+
+`.github/workflows/deployment-workflow.yaml` calls the shared pipeline in
+[`unb-libraries/github-workflows`](https://github.com/unb-libraries/github-workflows):
+build the image, push it to GHCR, then `kubectl set image` on the Kubernetes deployment.
+Pull requests build and push only the immutable `<sha>-<timestamp>` tag; a push to `dev`
+also tags `:dev` and deploys to the `dev` namespace as `dev-womenactivists.lib.unb.ca`.
+The `prod` branch still holds the Drupal build and deploys prod on its own workflow.
+
+The `Dockerfile`'s production path runs `pnpm generate` in a throw-away `build` stage and
+serves the result from `ghcr.io/unb-libraries/nginx`, the standard UNB Libraries nginx
+image. `docker/nginx/app.conf` replaces that image's own config — see its header for what
+differs; in short, Nuxt's `try_files` (so a dead link is a real 404, not the home page with
+a 200 status), the `/health` endpoint the Helm chart's probes require, gzip, and an
+immutable long-cache for fingerprinted assets.
+
+The build fails if the site is incomplete: `scripts/verify-generate.mjs` derives the
+expected route set from `content/` and asserts every page was prerendered. This matters
+because `nuxt generate` finds routes by crawling links, the home page's featured activists
+are client-side only, and `nitro.prerender.failOnError` is `false`.
+
+The Kubernetes side lives in `unb-libraries/kubernetes-metadata`:
+`services/womenactivists.lib.unb.ca/02_frontend_nuxt/`, on the `unblib-daemon-nuxt-ssg`
+chart. Because the site is generated statically, any change to pages or content requires a
+rebuild — there is no server-side rendering at runtime.
+
+## Entry points
+
+- `/` — home page: 6 randomly featured activists (client-side pick) and a link to the
+  full directory.
+- `/about` — project background, with 10 further sub-pages (project origins, planning,
+  interviewing, writing the profiles, acknowledgements, personal reflection, using the
+  site, appendices, and two appendix sub-pages).
+- `/activists` — directory of all 27 activists, with a province filter and pagination.
+- `/activists/<slug>` — an activist's biography, with links to her own narrative sections.
+- `/activists/<slug>/<section>` — one narrative section of an activist's biography.
+- `/commentaries` — hub page for the 3 interpretive essays.
+- `/commentaries/<slug>` — one commentary essay.
+- `/bibliography` — the categorized bibliography.

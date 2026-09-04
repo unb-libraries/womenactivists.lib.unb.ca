@@ -1,0 +1,355 @@
+@import "tailwindcss";
+
+/* Dark-purple chrome wrapping a cream reading panel. --color-band and
+   --color-link are darkened from the source palette's #976da5 to reach AA. */
+@theme {
+  --color-page: #2a0038;
+  --color-content: #fcfae6;
+  --color-band: #8a629a;
+  --color-text: #495057;
+  --color-inverse: #fcfae6;
+  --color-link: #795784;
+  --color-link-hover: #2a0038;
+  --color-rule: #cbd0d4;
+  --color-focus: #2a0038;
+  --font-body: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+@layer base {
+  html {
+    /* Stops the centred column shifting between scrolling and non-scrolling pages. */
+    scrollbar-gutter: stable;
+  }
+
+  body {
+    @apply bg-page font-body text-base leading-normal text-text;
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-focus;
+  }
+
+  h1 {
+    @apply font-medium text-[1.6rem] leading-tight mb-8;
+  }
+
+  h2 {
+    @apply font-medium text-[1.4rem] leading-tight mb-4;
+  }
+
+  h3 {
+    @apply font-medium text-[1.2rem] leading-tight mb-4;
+  }
+
+  p {
+    @apply mb-4;
+  }
+
+  ul {
+    @apply list-disc pl-8 mb-4;
+  }
+
+  ol {
+    @apply list-decimal pl-8 mb-4;
+  }
+
+  a {
+    @apply text-link no-underline;
+  }
+
+  a:hover,
+  a:focus-visible,
+  a:active {
+    @apply text-link-hover underline;
+  }
+
+  /* Intentionally larger than an in-content h2. */
+  blockquote {
+    @apply px-8 py-4 mt-4 mb-8 text-[1.4rem] border-l-4 border-rule;
+  }
+
+  hr {
+    @apply my-8 border-t border-rule;
+  }
+
+  main img {
+    @apply my-4;
+  }
+}
+
+@layer components {
+  /* --- shell ------------------------------------------------------------ */
+
+  /* Header band, reading panel and footer band share it so their edges line
+     up; the purple bars show as gutters beyond this width. */
+  .site-container {
+    @apply mx-auto w-full max-w-[1400px];
+  }
+
+  .site-bar :focus-visible {
+    @apply outline-inverse;
+  }
+
+  .site-title {
+    @apply text-[1.8rem] font-bold uppercase leading-tight m-0 md:m-4;
+  }
+
+  .site-title a,
+  .site-title a:hover,
+  .site-title a:focus-visible,
+  .site-title a:active {
+    @apply text-inverse no-underline;
+  }
+
+  .nav-list {
+    @apply list-none pl-0 mb-0;
+  }
+
+  .nav-link {
+    @apply block py-[.2rem] text-inverse no-underline border-b border-transparent;
+  }
+
+  .nav-link:hover,
+  .nav-link:focus-visible,
+  .nav-link:active {
+    @apply text-inverse no-underline border-inverse;
+  }
+
+  .nav-link[aria-current='page'] {
+    @apply text-inverse border-inverse;
+  }
+
+  .nav-toggle {
+    @apply my-2 rounded border border-inverse/60 px-[10px] py-[9px];
+  }
+
+  .footer-link,
+  .footer-link:active {
+    @apply text-inverse no-underline;
+  }
+
+  .footer-link:hover,
+  .footer-link:focus-visible {
+    @apply text-inverse underline;
+  }
+
+  /* Longhand, not @apply: @apply emits declarations in utility-definition
+     order, so `position` would be unpredictable. */
+  .skip-link {
+    @apply sr-only;
+  }
+
+  .skip-link:focus {
+    position: fixed;
+    top: 0.5rem;
+    left: 0.5rem;
+    width: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    clip: auto;
+    clip-path: none;
+    white-space: nowrap;
+
+    @apply z-50 bg-content text-link border border-rule px-4 py-2 no-underline;
+  }
+
+  /* --- home: Profiles of Wisdom ----------------------------------------- */
+
+  /* min-h, not height, so the bar reflows at 200% text zoom. font-normal is
+     explicit because one cap is an h2 and the other a p. */
+  .view-header,
+  .view-footer {
+    @apply w-full md:w-3/4 md:ml-[25%] min-h-[2.8rem]
+      px-6 md:px-12 pt-[0.3rem] pb-1 mb-0
+      bg-band text-inverse text-[1.2rem] font-normal;
+  }
+
+  .view-header {
+    @apply uppercase rounded-bl-[2.8rem];
+  }
+
+  .view-footer {
+    @apply text-end rounded-tl-[2.8rem];
+  }
+
+  .view-footer a,
+  .view-footer a:hover,
+  .view-footer a:focus-visible {
+    @apply text-inverse underline;
+  }
+
+  /* Multi-column, not grid: slides fill down column one, and side-by-side
+     slides aren't forced to share a row height. */
+  .view-content {
+    @apply columns-1 md:columns-2 md:gap-8;
+  }
+
+  /* Flush at md, where the text column's own padding separates the rows.
+     overflow-hidden clips the portrait's 1px overhang below. */
+  .slide {
+    @apply grid grid-cols-1 md:grid-cols-12 gap-4 items-start overflow-hidden
+      break-inside-avoid my-4 py-4 md:my-0 md:py-0;
+  }
+
+  .slide__text {
+    @apply md:col-span-7 px-4 md:pb-2;
+  }
+
+  .slide__name {
+    @apply text-[1.4rem] font-normal mb-2 md:pt-8;
+  }
+
+  .slide__bio {
+    @apply mb-2 line-clamp-3;
+  }
+
+  .slide__more {
+    @apply mb-0 pt-2;
+  }
+
+  /* The multi-column box and 12-track grid both yield fractional widths, so at
+     some viewport widths the image rounds 1px short and the panel shows through
+     on its right. Overhang 1px; .slide clips it. */
+  .slide__portrait {
+    @apply md:col-span-5 w-[calc(100%+1px)] max-w-[300px] aspect-[15/19]
+      object-cover object-top m-0;
+  }
+
+  /* --- directory + commentaries rows ------------------------------------ */
+
+  .media-rows {
+    @apply list-none pl-0 mb-6;
+  }
+
+  .media-row {
+    @apply grid grid-cols-1 md:grid-cols-12 gap-4 items-start
+      py-4 border-t border-rule;
+  }
+
+  .media-row__text {
+    @apply md:col-span-9;
+  }
+
+  .media-row__title {
+    @apply text-[1.2rem] font-bold mb-2;
+  }
+
+  .media-row__subtitle {
+    @apply mb-2 text-sm;
+  }
+
+  .media-row__body > :last-child {
+    @apply mb-0;
+  }
+
+  .media-row__image {
+    @apply md:col-span-3 w-[150px] md:w-full md:max-w-[150px] h-auto m-0;
+  }
+
+  .media-row__image--crop {
+    @apply aspect-[15/19] object-cover object-top;
+  }
+
+  .results-count {
+    @apply mb-4 text-sm;
+  }
+
+  /* --- province filter --------------------------------------------------- */
+
+  .exposed-form {
+    @apply mb-8;
+  }
+
+  .exposed-form__label {
+    @apply block font-normal mb-1;
+  }
+
+  .exposed-form__select {
+    @apply border border-rule rounded-sm bg-white text-text px-2 py-1;
+  }
+
+  /* --- pagination -------------------------------------------------------- */
+
+  .pagination {
+    @apply flex flex-wrap justify-center gap-2 list-none pl-0 py-4 mb-4;
+  }
+
+  .pagination__link {
+    @apply block px-3 py-1 border border-rule rounded-sm no-underline;
+  }
+
+  /* Not --color-band: white on it is 4.18:1. */
+  .pagination__link--active,
+  .pagination__link--active:hover,
+  .pagination__link--active:focus-visible {
+    @apply bg-link-hover border-link-hover text-white;
+  }
+
+  /* --- book pager -------------------------------------------------------- */
+
+  .section-pager {
+    @apply mt-8 pt-4 border-t border-rule;
+  }
+
+  /* Explicit col-start so a missing prev or next leaves its cell empty and the
+     others hold position. Stacks below md. */
+  .section-pager__list {
+    @apply list-none pl-0 mb-0 grid grid-cols-1 gap-2
+      md:grid-cols-3 md:gap-4 md:items-baseline;
+  }
+
+  .section-pager__item--previous {
+    @apply md:col-start-1 md:text-left;
+  }
+
+  .section-pager__item--center {
+    @apply md:col-start-2 md:text-center;
+  }
+
+  .section-pager__item--next {
+    @apply md:col-start-3 md:text-right;
+  }
+
+  /* --- portraits and figures --------------------------------------------- */
+
+  /* Never float this: an uncleared float drags the quote, bio, figures and
+     section list around it on narrow viewports. */
+  .bio-portrait {
+    @apply w-full max-w-[300px] aspect-[15/19] object-cover object-top mb-4;
+  }
+
+  /* Commentary author photos are landscape, so no 15:19 crop. */
+  .bio-portrait--natural {
+    @apply aspect-auto object-contain max-w-[250px];
+  }
+
+  .content-figure {
+    @apply my-4;
+  }
+
+  .content-figure img {
+    @apply max-w-full h-auto mb-0;
+  }
+
+  .content-figure figcaption {
+    @apply mb-4;
+  }
+
+  .byline {
+    @apply mb-4 text-sm;
+  }
+
+  /* Label sits at body size rather than heading size. */
+  .links-of-interest {
+    @apply my-8;
+  }
+
+  .links-of-interest__label {
+    @apply text-base font-bold mb-2;
+  }
+
+  .bibliography-list li {
+    @apply my-4;
+  }
+}

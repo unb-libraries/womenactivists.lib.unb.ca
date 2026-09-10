@@ -6,6 +6,16 @@ const {
   NUXT_PORT,
 } = env
 
+// The GA4 property the Drupal site already reported to, so the switch to this build is
+// continuous in Analytics rather than a new property starting from zero. A measurement id
+// is public by design -- it ships in the page -- so it is not read from the environment.
+//
+// Unconditional, so dev-womenactivists.lib.unb.ca reports into the production property too:
+// dev and prod run the same image and NUXT_SITE_URI is baked identically into both, so
+// separating them needs a runtime location.hostname check or a GA4 internal-traffic filter.
+// See README.md's "Analytics" section for the full Drupal migration record and its caveats.
+const GA_MEASUREMENT_ID = 'G-BRFR77G20W'
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
@@ -65,6 +75,22 @@ export default defineNuxtConfig({
         { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png' },
         { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
         { rel: 'manifest', href: '/site.webmanifest' },
+      ],
+      // Prerendered into every page's head; there is no runtime server to inject it. This
+      // fires once per document load, so every in-site navigation -- all client-side routing
+      // -- is counted only by GA4 enhanced measurement's "page changes based on browser
+      // history events" option on the data stream. Turning that off silently drops nearly
+      // every pageview this site records, with nothing here to indicate why.
+      script: [
+        { src: `https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`, async: true },
+        {
+          // allow_ad_personalization_signals mirrors what Drupal's google_analytics module
+          // was already sending, so reporting behaviour does not change with the platform.
+          innerHTML: 'window.dataLayer=window.dataLayer||[];'
+            + 'function gtag(){dataLayer.push(arguments)}'
+            + 'gtag("js",new Date());'
+            + `gtag("config","${GA_MEASUREMENT_ID}",{allow_ad_personalization_signals:false});`,
+        },
       ],
     },
   },

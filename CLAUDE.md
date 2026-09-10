@@ -38,6 +38,17 @@ There is no test setup configured in this repo. Linting and commit messages are 
 - **Home page featured activists**: `app/pages/index.vue` loads the full `activists` collection, then picks 6 at random **client-side only** (`onMounted` + `app/utils/shuffle.ts`), approximating the live site's per-request-random "Profiles of Wisdom" slideshow. The static-generated HTML itself has no featured picks baked in — they only appear after client hydration.
 - **Styling**: Tailwind CSS v4 via the `@tailwindcss/vite` plugin (no `tailwind.config.js`). Theme tokens in `app/assets/css/main.css` under `@theme`, ported from the live site's Bootstrap theme: dark purple page/footer background (`--color-page: #2a0038`), medium-purple nav (`--color-nav: #976da5`), cream text (`--color-text: #fcfae6`), with distinct link/link-hover colors — this is a dark-themed site throughout, unlike `educationhistory.nuxt`'s light theme.
 - **Static assets**: migrated portraits/pictures live under `public/images/activists/<slug>/` and `public/images/commentaries/`.
+- **Analytics**: the plain GA4 gtag snippet, inlined in `app.head.script` in `nuxt.config.ts` — no
+  module, no runtime config, measurement id in the `GA_MEASUREMENT_ID` const. It reports to
+  `G-BRFR77G20W`, the property the Drupal site used, so the platform switch doesn't split the
+  history. **README.md's "Analytics" section is the migration record** — what the Drupal
+  `google_analytics` module was sending, what carried over, and four caveats. Two matter when
+  touching this code: (a) the snippet fires once per document load, so every in-site navigation is
+  counted only by GA4 enhanced measurement's "page changes based on browser history events" option
+  on the data stream, not by anything in this repo; (b) dev and prod run the *same image* and the id
+  is unconditional, so `dev-womenactivists.lib.unb.ca` reports into the production property —
+  unresolved, and not fixable with build-time env, since `NUXT_SITE_URI` is baked identically for
+  both in the `Dockerfile`.
 
 ## Content migration
 

@@ -15,6 +15,13 @@ export default defineNuxtConfig({
     // better-sqlite3, which has no prebuilt binaries and would require a
     // python3/make/g++ toolchain in the Alpine image to compile from source.
     experimental: { sqliteConnector: 'native' },
+    renderer: {
+      // Content wraps every h2/h3/h4 in a self-link by default (its `renderer.anchorLinks`
+      // becomes @nuxtjs/mdc's `headings.anchorLinks`). Nothing here links to a heading and
+      // there is no visible anchor affordance, so it only produced headings that read and
+      // style as links -- most visibly across the commentaries and the bibliography.
+      anchorLinks: false,
+    },
   },
   css: ['~/assets/css/main.css'],
   nitro: {

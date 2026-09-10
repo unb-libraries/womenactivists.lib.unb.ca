@@ -8,6 +8,16 @@ const sections = z.array(z.object({
   label: z.string(),
 })).default([])
 
+// The About outline is the only one with a second level: Drupal's Book module gave
+// "Appendices" two child pages. It stays one flat, in-reading-order list -- that is what
+// SectionPager walks for prev/next -- with `parent` naming the section a child nests
+// under, so SectionList and the parent's own page can group them back together.
+const aboutOutline = z.array(z.object({
+  slug: z.string(),
+  label: z.string(),
+  parent: z.string().optional(),
+})).default([])
+
 const pageSchema = z.object({
   title: z.string(),
   oldPath: z.string(),
@@ -58,7 +68,7 @@ export default defineContentConfig({
     about: defineCollection({
       type: 'page',
       source: 'about/index.md',
-      schema: pageSchema.extend({ sections }),
+      schema: pageSchema.extend({ sections: aboutOutline }),
     }),
     aboutSections: defineCollection({
       type: 'page',

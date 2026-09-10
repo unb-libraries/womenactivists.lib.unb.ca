@@ -352,4 +352,10 @@
   .bibliography-list li {
     @apply my-4;
   }
+
+  /* Second level of the About outline. The base `ul` bottom margin would push the
+     following sibling section away from its own parent. */
+  .section-list__children {
+    @apply mb-0;
+  }
 }

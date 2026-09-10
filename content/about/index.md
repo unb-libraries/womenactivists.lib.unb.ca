@@ -20,8 +20,10 @@ sections:
     label: "Appendices"
   - slug: "interview-guide"
     label: "Interview Guide"
+    parent: "appendices"
   - slug: "change-agent-strategies"
     label: "Change Agent Strategies"
+    parent: "appendices"
 ---
 [Liz Burge](http://www.unbf.ca/education/faculty/burge.html) is a Professor in Adult Education at the [University of New Brunswick](http://www.unb.ca/), with years of volunteer social activism in the fields of aging and built heritage. Some strategies she had to learn the hard way; others she was able to learn from older and wiser colleagues before the ‘heat’ of the action.
 

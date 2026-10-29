@@ -3,7 +3,7 @@ name: Update womenactivists.lib.unb.ca
 on:
   workflow_dispatch:
   schedule:
-    - cron: '33 6 * * 1,4'
+    - cron: '33 6 1 * *'
 
 jobs:
   update:

@@ -79,7 +79,7 @@ There is no test setup configured in this repo. Linting and commit messages are 
 - **`Dockerfile`**: `base` is pure toolchain (no `COPY`, so it stays cached); `build` copies
   `package.json`/`pnpm-lock.yaml`/`pnpm-workspace.yaml` and installs *before* copying the
   rest, so editing `content/` does not reinstall `node_modules`; the final stage is
-  `ghcr.io/unb-libraries/nuxt-ssg:3.23.x` with `.output/public` copied into `$APP_WEBROOT`.
+  `ghcr.io/unb-libraries/nuxt-ssg:3.24.x` with `.output/public` copied into `$APP_WEBROOT`.
 - **The nginx config lives in the base image**
   ([docker-nuxt-ssg](https://github.com/unb-libraries/docker-nuxt-ssg)), not here: Nuxt's
   `try_files`, gzip, the asset cache, and — load-bearing — `location = /health`, which the
